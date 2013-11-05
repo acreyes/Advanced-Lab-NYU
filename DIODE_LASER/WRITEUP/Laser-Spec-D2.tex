@@ -62,13 +62,78 @@ A photon of light carries some energy that corresponds to its frequency, given b
 
 
 
-
+\section{Doppler Broadened Absorption}
+\label{sec:broad}
 
 \section{Michelson Interferometer}
 
-\section{Doppler Broadened Absorption}
+\subsection{Introduction}
 
+In order to interpret an absorption spectrum it is essential that we
+know what frequency, or relative frequency, of light is incident on
+our sample. Since our diffraction grating sweeps through its position
+at a constant rate a simple Michelson Interferometer can be set up to
+convert between the time of in our oscilloscope traces and a relative
+frequency scale. The motivation being so we can measure the relative
+frequencies of the different excited and ground states in our Rubidium
+spectrums.
+
+A Michelson Interferometer is made by splitting some beam of light
+into two arms with a path length distance, $\Delta L$, between
+them. The light is then recombined and sent into a detector. Because
+of the difference in path length, when recombined the two beams will
+be out of phase, and the combined beam's intensity will go as:
+\begin{equation}
+I \propto 1 + \cos \frac{4\pi \Delta Lf}{c}
+\end{equation}
+where $f$ is the frequency of light and $c$ is the speed of light. If
+the frequency of the light is shifted, then the intensity will go as a
+sinusoid, with period 
+\begin{equation}
+\label{eqn:T}
+T = \frac{2\Delta L \delta f}{c}
+\end{equation}
+here $\delta f$ is corresponding change in frequency. Equation
+~\ref{eqn:T} can be inverted to give $\delta f$:
+\begin{equation}
+\label{eqn:df}
+\delta f = \frac{c}{2\Delta L T}
+\end{equation}
+
+\subsection{Methods}
+
+The laser from Section ~\ref{sec:broad} was used with the same
+settings tuned to the absorption lines of Rubidium. The following was
+done to set up the apparatus:
+\begin{enumerate}
+\item The beam incident to the wedge was split into two (using a beam splitter) and the stronger beam was sent to the interferometer setup (described in the following steps). The weaker beam was sent to the probe-pump beam setup as given above.
+\item The interferometer beam was sent to a 50-50 beam splitter placed so as to create a new perpendicular beam.
+\item In the path of the original beam was placed a mirror which reflected light back at the beam splitter.
+\item In the path of the new beam (leaving the splitter at $90^\circ$
+  to the original beam) was placed another mirror. This mirror
+  reflected the beam back to the splitter. This mirror was placed as
+  far away from the splitter as possible, so as to maximize the
+  difference in distance both beams (original and split) traveled. We
+  measured a $\Delta L$ of $1.7971 \pm 0.0001$m, by counting the
+  number of holes on the optics table. 
+\item The two beams (off of both mirrors) were aligned after passing through the beam splitter one last time.
+\item This aligned beam was directed into a photoelectric diode to measure light intensity.
+%\item Measurements of absorption spectra (with pump beam to point out hyperfine splitting) were made alongside interferometer intensity. Figure~\ref{fig:int_1} represents these data.
+\end{enumerate}
+
+\subsection{Results}
+
+
+Figure ~\ref{fig:int_1} shows our interference patter (shown in red)
+alongside a Rubidium absorption spectrum. To establish a conversion
+between time and frequency, the number of periods in a given interval of
+the interference pattern were counted. Using Equation ~\ref{eqn:df}
+the $\frac{\delta f}{T}$ can be calculated to give a conversion
+between time and frequency. We established a $\frac{\delta f}{T}$ of
+$0.004 \pm .002\frac{\normalfont{GHz}}{\normalfont{ms}}$.  
+%%%%%%%SHOULD MAKE FIGURE NOW SHOWING DOPPLER BROADENING AGAINST FREQUENCY%%%%%%%%%%%%%%%
 \section{Saturated Absorption}
+
 
 
 
@@ -77,5 +142,14 @@ A photon of light carries some energy that corresponds to its frequency, given b
   rubidium maser. Phys. Rev., 168:129-149, 1968.
 \bibitem{harvard}"Rubidium Fluoresence." Cfa.harvard.edu. Harvard, n.d. Web.
 \end{thebibliography}
+
+
+%%%%%%%%%%%FIGURES%%%%%%%%%%%%
+
+\section{Figures}
+
+\subsection{please remove this for final draft}
+
+\input{figures.tex}
 
 \end{document}
