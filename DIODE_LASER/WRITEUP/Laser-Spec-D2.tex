@@ -56,14 +56,110 @@ used to investigate the fine structure of Rubidium.
 \section{Background}
 
 
-\indent It is well understood that an electron bound to a nucleus in some atom is restricted to a set of allowed energies, of which it can be found in. These energies correspond to ``wavefunctions'', which are eigenfunctions of the atom's energy Hamiltonian operator, that describe the probability of finding that electron at a given point in space. Because an electron is restricted to these allowed energies, it can absorb energy only of an amount that is exactly the difference to some other allowed energy, $\Delta E$. 
+\indent It is well understood that an electron bound to a nucleus in
+some atom is restricted to a set of allowed energies, of which it can
+be found in. These energies correspond to ``wavefunctions'', which are
+eigenfunctions of the atom's energy Hamiltonian operator, that
+describe the probability of finding that electron at a given point in
+space. Because an electron is restricted to these allowed energies, it
+can absorb energy only of an amount that is exactly the difference to
+some other allowed energy, $\Delta E$, these are shown qualitatively
+in Figure ~\ref{fig:energies}. 
 
-A photon of light carries some energy that corresponds to its frequency, given by: $E_\gamma = h\nu$, where $h$ is Planck's constant. If a photon carries energy $E_\gamma = \Delta E$, the energy of an allowed transition for an atomic electron, then the electron can absorb the photon and transition to an excited state. Since there is not a continuous spectrum of allowed energies the electron can only absorb photons for specific frequencies. We now consider some source of light, of varying frequency, is incident on a sample of some atom and the intensity of the light is measured on the other side of the sample. Since the atoms can only absorb particular frequencies of light, and transmit all others, in a plot of the measured transmitted intensity against light frequency, we would see dips in the transmitted intensities at the frequencies that correspond precisely to the allowed energy transitions of the atomic electrons. 
+ \begin{figure}[h] \begin{center}
+  \includegraphics[height=60mm]{energy.png}
+  \caption{\textbf{Energy Spectrum for Rubidium}\cite{caltech}. Lines
+    represent allowed energies for a Rubidium atom. }
+  \label{fig:energies}
+\end{center} \end{figure}
 
+A photon of light carries some energy that corresponds to its
+frequency, given by: $E_\gamma = h\nu$, where $h$ is Planck's
+constant. If a photon carries energy $E_\gamma = \Delta E$, the energy
+of an allowed transition for an atomic electron, then the electron can
+absorb the photon and transition to an excited state. Since there is
+not a continuous spectrum of allowed energies the electron can only
+absorb photons for specific frequencies. We now consider some source
+of light, of varying frequency, is incident on a sample of some atom
+and the intensity of the light is measured on the other side of the
+sample. Since the atoms can only absorb particular frequencies of
+light, and transmit all others, in a plot of the measured transmitted
+intensity against light frequency, we would see dips in the
+transmitted intensities at the frequencies that correspond precisely
+to the allowed energy transitions of the atomic electrons, as in
+Figure ~\ref{fig:broadening}. 
+
+\begin{figure}[h] \begin{center}
+  \includegraphics[height=60mm]{broadening.png}
+  \caption{\textbf{Standard example of spectrum with Doppler broadening}}
+  \label{fig:broadening}
+\end{center} \end{figure}
 
 
 \section{Doppler Broadened Absorption}
 \label{sec:broad}
+
+\subsection{Introduction}
+
+An interesting feature of Figure ~\ref{fig:broadening} is that the
+absorption peaks all have some width, with absorption bleeding into
+frequencies around those corresponding to allowed transitions. This
+phenomena is known as Doppler Broadening, and is a result of atoms in
+the gas phase obeying a Maxwell Speed Distribution. For a light beam incident
+on a sample of some gas, the velocity of the atoms in the sample will
+have some component along the propagation direction of the light. For
+atoms with velocity components along the direction of the light will,
+in their rest frame, see the light being red-shifted towards a lower
+frequency. Likewise in the rest frame of those atoms moving against
+the incident direction of the light will see the light being
+blue-shifted towards a higher frequency. Because of this the sample as
+a whole can absorb light of frequencies off resonance from the
+frequencies associated with the allowed transitions, leading to the
+broadened peaks of Figures ~\ref{fig:broadening} and
+~\ref{fig:absorb1}. 
+
+\begin{figure}[h] \begin{center}
+  \includegraphics[height=80mm]{absorb3.png}
+  \caption{\textbf{Intensity of Laser Beam with Varied Frequency through Rubidium Chamber} showing the effective absorption spectrum of Rubidium as a function of frequency (represented here as change in frequency over time). }
+  \label{fig:absorb1}
+\end{center} \end{figure}
+
+\subsection{Methods}
+\label{sec:dop:meth}
+To observe a Doppler Broadened absorption spectrum we used a diode
+laser aimed at a chamber of Rubidium gas held at $50^\circ$C. The
+following steps were performed to absorb an absorption spectrum of Rubidium:
+
+\begin{enumerate}
+\item The provided laser was turned on and the current to the laser
+  was increased until the beams was observed to be ``lasing''. This
+  was the threshold of laser current associated with the beam, as viewed through
+  the CCTV camera on a piece of paper, jumping discontinuously in intensity. 
+\item The laser was aimed at and through the Rb gas chamber.
+\item A ramp voltage was applied to the piezoelectric within the laser
+  assembly. This voltage controlled the angle of incidence of the
+  laser on a diffraction grating, effectively controlling the
+  frequency of light incident on the gas chamber. 
+\item A CCTV camera, capable of viewing infrared light was aimed as the Rb gas chamber. The incident current to the laser assembly was increased until florescence was seen.
+\item A photoelectric diode, capable of reporting incoming light
+  intensity in the form of voltage, was placed in the path of the beam
+  exiting the Rubidium chamber.
+\item The voltage from the diode was measured on an oscilloscope
+  against ramp voltage to the piezo ($\propto$ frequency of light).
+\item The voltage offset, frequency, and slope of the ramp were adjusted, as was the current to the laser. This was done until the absorption spectrum of both the $^{85}$Rb and $^{87}$Rb isotopes could be seen on the scope.
+\item Several samples of the spectrum were taken. They are reproduced in Figures~\ref{fig:absorb1}$-$\ref{fig:absorb2}.
+\item The voltage from the diode was then subtracted from the voltage of the ramp, with the scales of the two appropriately adjusted for compatibility. This allowed for observation of the spectrum without the ramp voltage artifact.
+\end{enumerate}
+
+\subsection{Results}
+\begin{figure}[h] \begin{center}
+  \includegraphics[height=80mm]{2-2-002.png}
+  \caption{\textbf{Intensity of Laser Beam vs. Varying Laser Frequency
+      with Pump}  shown over the course of approximately two full
+    cycles in frequency. The red lines show the beginning and end of
+    one ramp cycle.}
+  \label{fig:absorb2}
+\end{center} \end{figure}
 
 \section{Michelson Interferometer}
 
@@ -140,7 +236,10 @@ $0.004 \pm .002\frac{\normalfont{GHz}}{\normalfont{ms}}$.
 \begin{thebibliography}{99}
 \bibitem{vanier}Jacques Vanier. Relaxation in rubidium-87 and the
   rubidium maser. Phys. Rev., 168:129-149, 1968.
-\bibitem{harvard}"Rubidium Fluoresence." Cfa.harvard.edu. Harvard, n.d. Web.
+\bibitem{harvard}"Rubidium Fluoresence." Cfa.harvard.edu. Harvard,
+  n.d. Web.
+\bibitem{caltech}Caltech Department of Physics. Saturated Absorption
+Spectroscopy. Caltech
 \end{thebibliography}
 
 
