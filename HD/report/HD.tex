@@ -1,0 +1,186 @@
+% Lab Writeup for HD Lab
+% Adam Reyes, George Wong
+% Advanced Lab Fall 2013
+
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{sectsty}
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage[english]{babel}
+\usepackage{float}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section} 
+\numberwithin{table}{section}
+%\setlength\parindent{0pt}
+
+\fancyhead[R]{\thepage} 
+\fancyhead[L]{Reyes, Wong} 
+\fancyhead[C]{Hydrogen-Deuterium Shift} 
+\fancyfoot[L]{} 
+\fancyfoot[C]{} 
+\fancyfoot[R]{} 
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+\title{	
+The Hydrogen-Deuterium Isotope Shift
+\horrule{0.5pt}
+\normalfont \normalsize 
+\textsc{Advanced Experimental Physics }
+}
+
+\author{Adam Reyes \\ George Wong} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+
+\begin{document}
+\maketitle
+
+
+
+%%%%%%%%%Abstract%%%%%%%%%%%%%%%%%%%%%
+\textbf{Abstract:}
+Through use of a grating spectrometer, the spectra of both hydrogen and deuterium are measured. Through calculations, the difference in the spectra can be related to the mass difference between a single proton and a proton-neutron pair.
+
+%%%%% INTRODUCTION %%%%%
+\section{Introduction}
+
+\subsection{Theory}
+
+difference in reduced masses causes a difference in spectra between hydrogen and deuterium ``isotope shift''
+
+
+
+* talk about best angle of incidence *
+
+* talk about the orientation of the grating (upside down vs. right side up) *
+
+\subsection{Setup/Apparatus}
+
+A diffraction grating is a reflective material that has had grooves etched into its surface. Incident light reflects off of the surface and, due to interference effects, is refracted by different amounts. Equation~\ref{eq:gratingEqn} gives the relations between incident angle $\alpha$, reflected angle $\beta$, wavelength $\lambda$, and grating resolution $d$.
+
+\begin{equation} \label{eq:gratingEqn}
+n \lambda = d ( \sin(\alpha) + \sin(\beta))
+\end{equation}
+
+Figure~\ref{fig:diagram1} provides an overhead view of the apparatus.
+
+
+\begin{figure}[H] \begin{center}
+  \includegraphics[height=60mm]{diagram1.png}
+  \caption{\textbf{Overview of Apparatus} showing relative locations of light source (lamp), collimator with slit, diffraction grating mounted on revolving table, telescope (also on revolving table) and eyepiece.}
+  \label{fig:diagram1}
+\end{center} \end{figure}
+
+
+
+%%%%% PROCEDURE %%%%%
+\section{Procedure}
+
+\subsection{Calibration}
+
+It was important to ensure all parts of the apparatus were focused and adjusted so that the light coming from the slit would diffract off of the grating and enter the telescope at proper angles for viewing.
+
+\begin{enumerate}
+\item The mirror was placed on the mounting table and centered. Its exact location was marked for repeatability.
+\item The rack and pinion on the telescope was adjusted until the image of the cross hairs on the mirror was as sharp as the true image of the cross hairs.
+\item To bring the mounting table into the same rotational plane as the telescope, the mirror was moved through $180^\circ$ and the leveling of the table was adjusted to bring the image of the cross hairs on the mirror towards place they appeared on the reverse face of the mirror.
+\item The mirror was repeated rotated through $180^\circ$ and the leveling of the table was adjusted at each step to bring the image towards equilibrium. This process was ended when the two images were as close together as possible and further adjustments to the table made the placements worse.
+\item The mirror was removed from the central mounting table and the telescope and collimator were brought to be in line with each other.
+\item A light was placed behind the slit on the collimator and the distance of the lens in from the slit within the collimator was adjusted until the image of the slit as seen through the eyepiece was as focused as possible.
+\item The cross hairs were positioned immediately on the slit and half way up the slit, so as to align the plane of the collimator with that of the telescope/mounting table (already aligned).
+\end{enumerate}
+
+
+\subsection{Angular Alignment}
+Knowledge of the exact measures of angles was very important in this lab, so the following method was developed to permit precise measurements of angles. The following assumes the experimenter wishes to generate a set up with incident angle $\alpha$.
+
+\begin{enumerate}
+\item The diffraction grating was placed perpendicular to the eyepiece. This perpendicularity was confirmed by looking through the eyepiece and rotating until the image of the cross hairs in the grating (zeroth order) lined up with the true image of the cross hairs.
+\item The marked relative angle of the telescope to the mounting table was noted and considered to be $0^\circ$. This offset was changed to $\alpha$, with the mirror being rotated counter-clockwise.
+\item The relative angle of the telescope and mounting table was fixed, and the two pieces were moved together until the zeroth order diffraction off the grating was visible through the eyepiece.
+\item At this point, the incident and reflected angles were equal and exactly $\alpha$. The angular position of the mounting table was fixed.
+\end{enumerate}
+
+
+\subsection{Measurement of Spectra}
+In this section, we actually measure the spectra of the light (emission spectra) as a function of angle. The following procedure was performed with both the provided Sodium and Hydrogen-Deuterium lamps; however, it would be exactly the same for any lamp/source.
+
+\begin{enumerate}
+\item An angle of incidence $\alpha$ was obtained using the procedure outlined above.
+\item A light source (lamp) was placed before the slit and was covered with a blackout sheet, so as to completely darken the room.
+\item The telescope was rotated from the zeroth order reflection until a line was visible. At this point, the cross hairs were brought to rest directly on the center of the line. The relative change in angle off zeroth order is noted.
+\item The above step was repeated until the telescope could not be physically rotated any further.
+\end{enumerate}
+
+
+
+
+%%%%% DATA + ANALYSIS/RESULTS %%%%%
+\section{Data \& Analysis}
+
+
+
+
+%\begin{table}[H]
+%\centering
+%\caption{Average frequency difference ($\Delta$GHz) between peaks with associated error}
+%\begin{tabular}{ || c | c c c c || }
+%  \hline
+%  \hline
+%   $-$ & 87a & 85a & 85b & 87b \\
+%  \hline
+%  87a & $-$ & $2.37 \pm 0.14$ & $4.97 \pm 0.23$ & $6.03 \pm 0.53$ \\
+%  85a & $2.37 \pm 0.14$ & $-$ & $2.60 \pm 0.13$ & $3.64 \pm 0.18$ \\
+%  85b & $4.97 \pm 0.23$ & $2.60 \pm 0.13$ & $-$ &  $1.04 \pm 0.07$ \\
+%  87b & $6.03 \pm 0.53$ & $3.64 \pm 0.18$ & $1.04 \pm 0.07$ & $-$  \\
+%  \hline
+%  \hline
+%\end{tabular}
+%\label{table:freqOffset}
+%\end{table}
+
+
+\section{Conclusion}
+
+
+Over the course of performing the experiment, it was found that many of the procedures were difficult or impossible to perform well due to the condition of the apparatus (especially grating). In future experiments, a less-worn grating with perhaps a finer resolution would be very useful. Also, a better way to measure angles would be useful.
+
+** talk about focusing in on a single line **
+
+
+%%%%%%%%%%%%%References%%%%%%%%%%%%%%%%%%%%
+%\begin{thebibliography}{99}
+%\bibitem{vanier}Jacques Vanier. Relaxation in rubidium-87 and the
+%  rubidium maser. Phys. Rev., 168:129-149, 1968.
+%\bibitem{harvard}"Rubidium Fluoresence." Cfa.harvard.edu. Harvard, n.d. Web.
+%\end{thebibliography}
+
+
+% %%%%%%%%%%%%%% Absorption figure%%%%%%%%%%%%%%%%%%
+% \begin{figure}[h]
+%   \centering
+%   \includegraphics[width=3in]{/Users/adamreyes/Dropbox/AdvancedLab/Diode-Laser-Spec/WriteUp/figures_laserspec/ag-4-2-001_freq.png}
+%   \caption{Measured Transmission Absorption Spectrum for Rubidium.}
+%   \label{fig:absorption}
+% \end{figure}
+% %%%%%%%%%% 
+% %%%%%%%%%%%%%%%%%% Saturated Absorption figure%%%%%%%%
+% \begin{figure*}[h]
+%   \centering
+%   \includegraphics[width=3in]{/Users/adamreyes/Dropbox/AdvancedLab/Diode-Laser-Spec/WriteUp/figures_laserspec/ag-4-2-009_saturated.png}
+%   \caption{Measured Saturated Absorption Spectrum for Rubidium with electronic subtration of doppler broadening and laser current modulation}
+%   \label{fig:saturatedabsorption}
+% \end{figure*}
+% %%%%%%%%%% 
+
+
+\end{document}
