@@ -55,6 +55,34 @@ Through use of a grating spectrometer, the spectra of both hydrogen and deuteriu
 
 \subsection{Theory}
 
+The Bohr model of the Hydrogen Atom gives that the allowed energies of
+the atom's electron are
+\begin{equation}
+\label{eq:Hen}
+E_n = -\frac{R_E}{n^2}
+\end{equation}
+Where $R_E$ is the Rydberg energy and $R_E \propto \mu$. Here
+$\upsilon$ is the reduced mass of the nucleus and the electron. If we
+consider now the isotope of Hydrogen, deuterium, with one neutron it
+clearly has a different $\mu$ from plain Hydrogen. So the energy of
+the allowed transitions and hence the emission spectrums are
+different. The Rydberg formula(eqn \ref{eq:emis}) gives the wavelengths of the emission
+spectrum for Hydrogen with an infinitely massive nucleus in terms of
+the Rydberg constant $R$.
+\begin{equation}
+\label{eq:emis}
+\frac{1}{\lambda_\infty} = R(\frac{1}{n_1 ^2}-\frac{1}{n_2 ^2})
+\end{equation}
+Eqn \ref{eq:lamM} gives the the emitted wavelength corrected for the
+mass of the nucleus $M$.
+\begin{equation}\label{eq:lamM}
+\lambda_M = \lambda_{\infty} (1 + \frac{m_e}{M})
+\end{equation}
+where $m_e$ is the mass of the electron. From this it can be shown
+that the mass shift from Hydrogen($M_H$) to Deuterium($M_D$) is
+\begin{equation}
+\Delta M = \frac{\Delta \lambda}{\lambda_\infty}\frac{M_D M_H}{m_e}
+\end{equation}
 difference in reduced masses causes a difference in spectra between hydrogen and deuterium ``isotope shift''
 
 
@@ -90,10 +118,13 @@ Figure~\ref{fig:diagram1} provides an overhead view of the apparatus.
 It was important to ensure all parts of the apparatus were focused and adjusted so that the light coming from the slit would diffract off of the grating and enter the telescope at proper angles for viewing.
 
 \begin{enumerate}
-\item The mirror was placed on the mounting table and centered. Its exact location was marked for repeatability.
-\item The rack and pinion on the telescope was adjusted until the image of the cross hairs on the mirror was as sharp as the true image of the cross hairs.
-\item To bring the mounting table into the same rotational plane as the telescope, the mirror was moved through $180^\circ$ and the leveling of the table was adjusted to bring the image of the cross hairs on the mirror towards place they appeared on the reverse face of the mirror.
-\item The mirror was repeated rotated through $180^\circ$ and the leveling of the table was adjusted at each step to bring the image towards equilibrium. This process was ended when the two images were as close together as possible and further adjustments to the table made the placements worse.
+\item A two-sided mirror was placed on the mounting table and centered. Its exact location was marked for repeatability.
+\item The telescope was then focused to the image of the crosshairs in
+  the eyepiece reflected from the mirror.
+\item The telescope and mounting table were leveled to each other by
+  aligning the horizontal crosshair of the eyepiece to the reflected
+  image on both sides of the mirror using the leveling screws of the
+  mount and the telescope.
 \item The mirror was removed from the central mounting table and the telescope and collimator were brought to be in line with each other.
 \item A light was placed behind the slit on the collimator and the distance of the lens in from the slit within the collimator was adjusted until the image of the slit as seen through the eyepiece was as focused as possible.
 \item The cross hairs were positioned immediately on the slit and half way up the slit, so as to align the plane of the collimator with that of the telescope/mounting table (already aligned).
@@ -101,21 +132,43 @@ It was important to ensure all parts of the apparatus were focused and adjusted 
 
 
 \subsection{Angular Alignment}
-Knowledge of the exact measures of angles was very important in this lab, so the following method was developed to permit precise measurements of angles. The following assumes the experimenter wishes to generate a set up with incident angle $\alpha$.
+\label{sec:angal}
+Knowledge of the exact measures of angles was very important in this
+lab, so the following method was developed to permit precise
+measurements of angles. The following assumes the experimenter wishes
+to generate a set up with incident angle $\alpha$, between the
+collimator and normal incidence to the grating.
 
 \begin{enumerate}
-\item The diffraction grating was placed perpendicular to the eyepiece. This perpendicularity was confirmed by looking through the eyepiece and rotating until the image of the cross hairs in the grating (zeroth order) lined up with the true image of the cross hairs.
-\item The marked relative angle of the telescope to the mounting table was noted and considered to be $0^\circ$. This offset was changed to $\alpha$, with the mirror being rotated counter-clockwise.
-\item The relative angle of the telescope and mounting table was fixed, and the two pieces were moved together until the zeroth order diffraction off the grating was visible through the eyepiece.
+\item The telescope was aligned to normal incidence with the mirror by
+  aligning the vertical crosshair of the eyepiece with its reflected image. 
+\item With the position of the mount fixed, the telescope was rotated
+  by the desired angle $\alpha$.
+\item The relative angle of the telescope and mounting table was
+  fixed, and the two pieces were moved together until the reflection
+  from the slit image was aligned with the vertical crosshair. 
 \item At this point, the incident and reflected angles were equal and exactly $\alpha$. The angular position of the mounting table was fixed.
 \end{enumerate}
 
+\subsection{Eyepiece Calibration}
+\label{sec:eyecal}
 
+In order to make precise angular measurements for this experiment we
+used an eyepiece with a thing crosshair that could be moved with a
+micrometer screw gauge. The divisions on the gauge had to be
+calibrated in order to know what grating angle is swept through as the
+screw is turned. This was done by picking two lines separated by as
+much arc length as could fit in the view of the eyepiece. This angle
+was then measured using the protractor on the spectrometer, then
+measured using the eyepiece gauge. It was then determined that one
+eyepiece unit corresponds to $0.0023\pm0.0001^{\circ}$
 \subsection{Measurement of Spectra}
+\label{sec:specmes}
 In this section, we actually measure the spectra of the light (emission spectra) as a function of angle. The following procedure was performed with both the provided Sodium and Hydrogen-Deuterium lamps; however, it would be exactly the same for any lamp/source.
 
 \begin{enumerate}
-\item An angle of incidence $\alpha$ was obtained using the procedure outlined above.
+\item An angle of incidence $\alpha$ was obtained using the procedure
+  outlined in~\ref{sec:angal}.
 \item A light source (lamp) was placed before the slit and was covered with a blackout sheet, so as to completely darken the room.
 \item The telescope was rotated from the zeroth order reflection until a line was visible. At this point, the cross hairs were brought to rest directly on the center of the line. The relative change in angle off zeroth order is noted.
 \item The above step was repeated until the telescope could not be physically rotated any further.
