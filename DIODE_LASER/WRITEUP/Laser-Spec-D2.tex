@@ -91,7 +91,7 @@ Figure ~\ref{fig:broadening}.
 
 \begin{figure}[h] \begin{center}
   \includegraphics[height=60mm]{broadening.png}
-  \caption{\textbf{Standard example of spectrum with Doppler broadening}}
+  \caption{\textbf{Standard example of spectrum with Doppler broadening}\cite{caltech}}
   \label{fig:broadening}
 \end{center} \end{figure}
 
@@ -199,7 +199,9 @@ here $\delta f$ is corresponding change in frequency. Equation
 \subsection{Methods}
 
 The laser from Section ~\ref{sec:broad} was used with the same
-settings tuned to the absorption lines of Rubidium. The following was
+settings tuned to the absorption lines of Rubidium. A diagram of the
+interferometer can be found in Figure~\ref{fig:setup} as the part of
+the apparatus beginning with the reflected beam from the first beam splitter. The following was
 done to set up the apparatus:
 \begin{enumerate}
 \item The beam incident to the wedge was split into two (using a beam splitter) and the stronger beam was sent to the interferometer setup (described in the following steps). The weaker beam was sent to the probe-pump beam setup as given above.
@@ -226,9 +228,101 @@ between time and frequency, the number of periods in a given interval of
 the interference pattern were counted. Using Equation ~\ref{eqn:df}
 the $\frac{\delta f}{T}$ can be calculated to give a conversion
 between time and frequency. We established a $\frac{\delta f}{T}$ of
-$0.004 \pm .002\frac{\normalfont{GHz}}{\normalfont{ms}}$.  
+$0.004 \pm .002\frac{\normalfont{GHz}}{\normalfont{ms}}$. The error
+here is dominated by that from the determination of $\Delta L$ and
+could be reduced by having a larger difference in the length of the
+two arms of the interferometer. Because of the fixed length of the BNC
+cable coming from the photo-diode detector we were limited to roughly
+half of the length of the optics bench for the long arm.  
 %%%%%%%SHOULD MAKE FIGURE NOW SHOWING DOPPLER BROADENING AGAINST FREQUENCY%%%%%%%%%%%%%%%
 \section{Saturated Absorption}
+
+\subsection{Introduction}
+\label{sec:satabintro}
+We can see in Figure ~\ref{fig:energies} that the 5P$_{\frac{3}{2}}$
+ground state of both Rubidium isotopes is split into two levels give by the F' quantum
+number. This splitting is due to coupling of the electron's spin to
+its ``orbit'' and is called the hyperfine structure. 
+
+However, we notice in the absorption spectrums so far discussed
+(Figures ~\ref{fig:absorb1}, ~\ref{fig:broadening}), that we see only
+the wide doppler broadened lines expected for the un-split
+5P$_{\frac{3}{2}}$ state. This is because, as we can see in Figure
+~\ref{fig:energies}, that the 5P$_{\frac{3}{2}}$ splittings are much
+more closely spaced than the ground state lines and more importantly
+closer together than the doppler broadening for each
+transition. Because the doppler broadening is wider than the
+separation of the excited state splittings they can not be seen in a
+regular absorption experiment.
+
+To get around this we now consider two collinear beams incident on the
+Rubidium sample in opposite directions. One beam, called the pump
+beam, is to have intensity much greater than the other. The weaker
+beam is called the probe beam, and is the one whose intensity is to be
+measured after exiting the Rubidium gas. For atoms in the gas with velocity
+component along the beam direction the light will be shifted in
+opposite frequency directions for the respective beams since the two beams are
+going in opposing directions. This will, as before, result in the
+typical doppler broadening off-resonance with respect to the
+transitions. For atoms with zero velocity component along the light
+propagation direction there is no frequency shift for either beam, and
+both beams can be absorbed by the atom. Because the pump beam is so
+intense it will saturate these atoms, stationary in the beam
+direction, in the excited state, preventing the probe beam from being
+absorbed and increasing its transmission percentage when the incident
+light is on resonance, allowing for the fine structure of Rubidium to
+be seen in an absorption spectrum using this set up.
+
+Another consequence of the close frequency proximity of the split
+5P$_{\frac{3}{2}}$ states is the phenomena of cross-over
+peaks. Consider two closely spaced resonant lines at frequencies
+$\nu_1$ and $\nu_2$ and a light frequency of $\nu_{\gamma} = \frac{\nu_1 +
+  \nu_2}{2}$. Because of doppler broadening there will be a ``false''
+peak at $\nu_{\gamma}$. 
+\subsection{Methods}
+\label{sec:satabmeth}
+\begin{figure}[h] \begin{center}
+  \includegraphics[height=80mm]{2-2-002-zoom.png}
+  \caption{\textbf{Intensity of Laser Beam vs. Varying Laser Frequency with Pump} shown over a restricted interval. A Pump beam has clearly been added, as hyperfine splitting is more easily observable. }
+  \label{fig:withPump_1}
+\end{center} \end{figure}
+The same Rubidium cell and laser from Sec.~\ref{sec:dop:meth} were
+used in this experiment. A diagram of our apparatus is shown in Figure
+~\ref{fig:setup}. The following steps were carried out in performing
+this experiment. 
+\begin{enumerate}
+\item The beam, instead of being reflected by a mirror into the
+  chamber, is sent into a 2$^\circ$ wedge and the reflected beams sent
+  into the Rubidium chamber and into two photo-diode detectors on the
+  other side. The transmitted beam is reflected around
+  the chamber.
+\item The beam directed around the chamber was aimed at a 50-50 beam
+  splitter that reflects the beam into the chamber to be the pump beam.
+\item The pump beam was then aligned to be collinear with one of the
+  beams coming from the wedge (probe beam). The probe beam signal is
+  shown in Figures~\ref{fig:satabsorb1} and~\ref{fig:withPump_1}
+\item The signal from the probe beam was subtracted electronically
+  from the reference signal coming from other wedged beam. 
+\end{enumerate}
+
+\clearpage
+\begin{figure}[h] \begin{center}
+  \includegraphics[height=6in, angle = 90]{full.png}
+  \caption{\textbf{Overall final set up of apparatus} showing
+    placement of all beam splitters, mirrors, and various other
+    devices to simultaneously measure the saturated absorption
+    spectrum and take interferometric measurements. }
+  \label{fig:setup}
+\end{center} \end{figure}
+\clearpage
+
+\begin{figure}[h] \begin{center}
+  \includegraphics[height=100mm]{3-1-001.png}
+  \caption{\textbf{Hyperfine splitting} as observed with the experimental set up used for this examination (sample shows intensity from combination of pump and probe beams). }
+  \label{fig:satabsorb1}
+\end{center} \end{figure}
+
+\subsection{Results}
 
 
 
