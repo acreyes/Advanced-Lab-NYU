@@ -10,12 +10,12 @@ def velocity(freq):
     return(v)
 
 os.chdir("pos_steel_0.7v")
-net, pm, freqs = [], [], []
+net, pm, vel = [], [], []
 
 for files in glob.glob("*.Rpt"): #loop over files
     name = files.split('.Rpt')
     v = velocity(float(name[0].strip('p')))
-    freqs.append(v)
+    vel.append(v)
     fid = open(files)
     a = fid.readline()
     a = fid.readline()
@@ -24,10 +24,12 @@ for files in glob.glob("*.Rpt"): #loop over files
     a = fid.readline()
     a = fid.readline()
     data = a.split()
-    net.append(data[4])
-    pm.append(data[5])
+    net.append(float(data[4]))
+    pm.append(float(data[5]))
 
-plt.plot(freqs, net, '-o')
+plt.plot(vel, net, '-o')
+plt.errorbar(vel, net, pm, fmt='bo', label = 'data')
+
 plt.xlabel('velocity (mm/s)')
 plt.ylabel('Net Counts')
 plt.show()
