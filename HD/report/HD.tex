@@ -10,6 +10,7 @@
 \usepackage{sectsty}
 \usepackage{fancyhdr}
 \pagestyle{fancyplain}
+\usepackage{parskip}
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage[english]{babel}
@@ -81,15 +82,16 @@ mass of the nucleus $M$.
 where $m_e$ is the mass of the electron. From this it can be shown
 that the mass shift from Hydrogen($M_H$) to Deuterium($M_D$) is
 \begin{equation}
+\label{eq:mass-shift}
 \Delta M = \frac{\Delta \lambda}{\lambda_\infty}\frac{M_D M_H}{m_e}
 \end{equation}
 difference in reduced masses causes a difference in spectra between hydrogen and deuterium ``isotope shift''
 
 
 
-* talk about best angle of incidence *
-
-* talk about the orientation of the grating (upside down vs. right side up) *
+* talk about best angle of incidence * \\
+* talk about the orientation of the grating (upside down vs. right side up) * \\
+* theory behind grating * \\
 
 \subsection{Setup/Apparatus}
 
@@ -103,11 +105,17 @@ Figure~\ref{fig:diagram1} provides an overhead view of the apparatus.
 
 
 \begin{figure}[H] \begin{center}
-  \includegraphics[height=60mm]{diagram1.png}
+  \includegraphics[height=65mm]{diagram1.png}
   \caption{\textbf{Overview of Apparatus} showing relative locations of light source (lamp), collimator with slit, diffraction grating mounted on revolving table, telescope (also on revolving table) and eyepiece.}
   \label{fig:diagram1}
 \end{center} \end{figure}
 
+
+\begin{figure}[H] \begin{center}
+  \includegraphics[height=65mm]{grating1.png}
+  \caption{\textbf{Micro-scale diagram of diffraction grating} showing grating with grooves and light paths. Angle naming conventions (for $\alpha$, $\beta$, and $\delta$ as well as $n^\mathrm{th}$ order diffraction lines are shown.}
+  \label{fig:diagram1}
+\end{center} \end{figure}
 
 
 %%%%% PROCEDURE %%%%%
@@ -154,14 +162,15 @@ collimator and normal incidence to the grating.
 \label{sec:eyecal}
 
 In order to make precise angular measurements for this experiment we
-used an eyepiece with a thing crosshair that could be moved with a
+used an eyepiece with a thin cross hair that could be moved with a
 micrometer screw gauge. The divisions on the gauge had to be
 calibrated in order to know what grating angle is swept through as the
-screw is turned. This was done by picking two lines separated by as
+screw was turned. This was done by picking two lines separated by as
 much arc length as could fit in the view of the eyepiece. This angle
 was then measured using the protractor on the spectrometer, then
 measured using the eyepiece gauge. It was then determined that one
 eyepiece unit corresponds to $0.0023\pm0.0001^{\circ}$
+
 \subsection{Measurement of Spectra}
 \label{sec:specmes}
 In this section, we actually measure the spectra of the light (emission spectra) as a function of angle. The following procedure was performed with both the provided Sodium and Hydrogen-Deuterium lamps; however, it would be exactly the same for any lamp/source.
@@ -180,32 +189,195 @@ In this section, we actually measure the spectra of the light (emission spectra)
 %%%%% DATA + ANALYSIS/RESULTS %%%%%
 \section{Data \& Analysis}
 
+The angular divisions on the rotation table came with the smallest unit of $1/3^\circ$. For each of our measurements not involving the fine-adjustment eyepiece, our recorded values were to a precision of $1/30^\circ$, or $1/10$ of the smallest marked measure.
+
+\vspace{1.5em}
+
+One gauge marking on the fine-adjustment eyepiece was found to be: \\
+$1$ guage $= 0.0023\pm0.0001$ degrees.
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Hydrogen/Deuterium Spectrum Lines} taken with angle of incidence $\alpha = 60^\circ$ and no use of fine-adjustment knob. }
+\begin{tabular}{ || c | c c c || }
+  \hline
+  \hline
+  line & degrees & $(\frac{1}{3})^\circ$ & $(\frac{1}{30})^\circ$  \\
+  \hline
+  zeroth & $351$ & $0$ & $8$  \\
+  faint purple & 333 & $1$ & $8$  \\
+  bright purple & 332 & 2 & 2 \\
+  faint purple & 332 & 1 & 7 \\
+  bright green-blue & 330 & 2 & 0 \\
+  very faint green-blue & 330 & 0 & 8 \\
+  very faint green-blue & 330 & 0 & 1 \\
+  faint green & 328 & 2 & 8 \\
+  very faint green & 328 & 1 & 2 \\
+  bright red & 325 & 2 & 7 \\
+  faint red & 324 & 2 & 3 \\
+  very bright red & 324 & 1 & 1 \\
+  very faint purple & 318 & 1 & 4 \\
+  bright purple & 316 & 2 & 6 \\
+  faint purple & 316 & 1 & 9 \\
+  bright blue-green & 313 & 0 & 7 \\
+  very faint blue-green & 312 & 1 & 2 \\
+  very faint blue-green & 312 & 0 & 1 \\
+  faint purple & 309 & 2 & 9 \\
+  faint purple & 309 & 0 & 8 \\
+  faint red & 304 & 0 & 7 \\
+  purple & 301 & 2 & 6 \\
+  extremely faint purple & 301 & 1 & 7 \\
+  very bright red & 301 & 1 & 2 \\
+  bright blue & 296 & 1 & 2 \\
+  extremely faint blue & 295 & 0 & 8 \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:hd60}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Hydrogen/Deuterium Spectrum Lines} taken with angle of incidence $\alpha = 45^\circ$ and use of fine-adjustment knob. }
+\begin{tabular}{ || c | c c c c c || }
+  \hline
+  \hline
+  line & degrees & $(\frac{1}{3})^\circ$ & $(\frac{1}{30})^\circ$ & left line (gauge)  & right line (guage) \\
+  \hline
+  zeroth & $376$ & $2$ & $8$ & $0$ & n/a \\
+  red & 346 & $1$ & $2$ & 1.5 & 5.7 \\
+  blue & 352 & 2 & 8 & 18.9 & 23 \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:hd45}
+\end{table}
+
+\vspace{1.5em}
+
+To determine the wavelengths corresponding to various lines, Equation~\ref{eq:gratingEqn} was rewritten with the value $K$ as the grating resolution:
+\begin{equation}
+\label{eq:wavelengthEqn}
+n \lambda = \dfrac{1}{K} \left( \sin(\alpha) + \sin(\beta) \right)
+\end{equation}
+
+ Because the grating used had a resolution of $600$ grooves/mm, $K=600$. The angle of incidence $\alpha$ corresponded to $45^\circ$ or $60^\circ$, depending on data set. The angle $\beta$ was given by the angle difference between the zeroth order and the measured line. The order of the line $n$ (an integer) was either known from mere sight recognition or adjusted until the wavelength value made sense (was in the visible light range).
+
+Table~\ref{table:hd-calculated} gives the calculated wavelength values.
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Hydrogen/Deuterium Line Wavelengths} given in (nm) }
+\begin{tabular}{ || c | c c || }
+  \hline
+  \hline
+  line & order & wavelength (nm)  \\
+  \hline
+  data & goes & here \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:hd-calculated}
+\end{table}
+
+\vspace{.7em}
 
 
+In an attempt to eliminate systematic error, the Sodium (Na) spectrum was also measured. The calculated wavelength values for Sodium were compared to the accepted Sodium spectrum wavelengths, which has lines at $589.0$ and $589.6$ nm. The difference between accepted and calculated values was compared for first and second order diffraction lines, and a rough linear relationship between degree and offset was established.
 
-%\begin{table}[H]
-%\centering
-%\caption{Average frequency difference ($\Delta$GHz) between peaks with associated error}
-%\begin{tabular}{ || c | c c c c || }
-%  \hline
-%  \hline
-%   $-$ & 87a & 85a & 85b & 87b \\
-%  \hline
-%  87a & $-$ & $2.37 \pm 0.14$ & $4.97 \pm 0.23$ & $6.03 \pm 0.53$ \\
-%  85a & $2.37 \pm 0.14$ & $-$ & $2.60 \pm 0.13$ & $3.64 \pm 0.18$ \\
-%  85b & $4.97 \pm 0.23$ & $2.60 \pm 0.13$ & $-$ &  $1.04 \pm 0.07$ \\
-%  87b & $6.03 \pm 0.53$ & $3.64 \pm 0.18$ & $1.04 \pm 0.07$ & $-$  \\
-%  \hline
-%  \hline
-%\end{tabular}
-%\label{table:freqOffset}
-%\end{table}
+\begin{table}[H]
+\centering
+\caption{\textbf{Sodium Spectrum Lines} taken with angle of incidence $\alpha = 60^\circ$ without use of fine-adjustment eyepiece }
+\begin{tabular}{ || c | c c c || }
+  \hline
+  \hline
+  line & degrees & $(\frac{1}{3})^\circ$ & $(\frac{1}{30})^\circ$  \\
+  \hline
+  zeroth & $361$ & $2$ & $8$  \\
+  first (left) & 337 & $2$ & $1$  \\
+  first (right) & 337 & 2 & 1 \\
+  second (left) & 317 & 0 & 2 \\
+  second (right) & 317 & 0 & 1 \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:sodium60}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Sodium Spectrum Lines} taken with angle of incidence $\alpha = 45^\circ$, making use of fine-adjustment eyepiece }
+\begin{tabular}{ || c | c c c c c || }
+  \hline
+  \hline
+  line & degrees & $(\frac{1}{3})^\circ$ & $(\frac{1}{30})^\circ$ & left line (gauge)  & right line (guage) \\
+  \hline
+  zeroth & $376$ & $2$ & $8$ & $0$ & n/a \\
+  first & 348 & $2$ & $1$ & 0 & 10.7 \\
+  second & 327 & 0 & 0 & 0 & 18 \\
+  third & 306 & 2 & 6 & 0 & 28.8 \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:sodium45}
+\end{table}
+
+Using the same formula as given above in Equation~\ref{eq:wavelengthEqn}, the corresponding wavelengths of the Na line were found and are presented in Table~\ref{table:na-wavelength}.
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Sodium Line Wavelengths} calculated }
+\begin{tabular}{ || c | c c c || }
+  \hline
+  \hline
+  line & $n\lambda$ (nm) & order & wavelength (nm)  \\
+  \hline
+  left & 697.4 & 1 & 697.4 \\
+  right & 696.8 & 1 & 696.8 \\
+  left & 1321.3 & 2 & 660.7 \\
+  right & 1320.1 & 2 & 660.1 \\
+  left & 1883.9 & 3 & 628.0 \\
+  right & 1882.1 & 3 & 627.4 \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:na-wavelength}
+\end{table}
+
+* note the above table doesn't seem quite right. that or my remembering about the linearity isn't correct... either way we are of by $0.6^\circ$ each time, which is what we should be... we're also off by $>100$ nm, which doesn't make any sense to me. Maybe I'm running the wrong code?
+\vspace{1.5em}
+\hrule
+\vspace{1.5em}
+To calculate the actual difference in mass, we use the Rydberg formula for reduced mass, Equation~\ref{eq:rydberg-rm}, to determine the inverse proportionality of wavelength to reduced mass, as in Equation~\ref{eq:inverse-prop}.
+
+\begin{equation}
+\label{eq:rydberg-rm}
+E_i - E_f = \dfrac{hc}{\lambda} = \dfrac{\mu_X Z^2 e^4}{\left( 4 \pi \epsilon_0 \right)^2 2 \hbar^2} \left[ \dfrac{1}{n^2_f} - \dfrac{1}{n_i^2} \right]
+\end{equation}
+
+\begin{equation}
+\label{eq:inverse-prop}
+\dfrac{1}{\lambda} \propto \mu
+\end{equation}
+
+From this, we find the relation between wavelengths and masses, given in Equation~\ref{eq:wavelength-masses}, wherein the 
+
+\begin{equation}
+\label{eq:wavelength-masses}
+\dfrac{\lambda_H - \lambda_D}{\lambda_H} = \dfrac{1-M_H / M_D}{1+M_H/m}
+\end{equation}
+
+
+From Equation~\ref{eq:mass-shift}, we can calculate the difference in mass between Hydrogen and Deuterium, as is done below.
+
+
+... shift calculations. I don't want to do this because of possibly using the incorrect data.
 
 
 \section{Conclusion}
 
 
-Over the course of performing the experiment, it was found that many of the procedures were difficult or impossible to perform well due to the condition of the apparatus (especially grating). In future experiments, a less-worn grating with perhaps a finer resolution would be very useful. Also, a better way to measure angles would be useful.
+Over the course of performing the experiment, it was found that many of the procedures were difficult or impossible to perform well due to the condition of the apparatus. Precise angular measurements were nearly impossible due to the amount of light needed in order to see both the reticule and the line. Overall, the alignment of the device (in terms of collimator, mounting table, and telescope) was next-to-impossible due to misalignment of the mirror/grating in the vertical plane. Also, the grating seemingly had several scratches on it and was overall in bad condition. For the angles measured to yield more precision in the calculations of wavelength, a grating with a higher resolution might be used.
 
 ** talk about focusing in on a single line **
 
