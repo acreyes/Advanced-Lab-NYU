@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{sectsty}
+\usepackage{parskip}
 \usepackage{fancyhdr}
 \pagestyle{fancyplain}
 \usepackage{subcaption}
@@ -56,42 +57,33 @@ used to investigate the fine structure of Rubidium.
 \section{Background}
 
 
-\indent It is well understood that an electron bound to a nucleus in
-some atom is restricted to a set of allowed energies, of which it can
-be found in. These energies correspond to ``wavefunctions'', which are
-eigenfunctions of the atom's energy Hamiltonian operator, that
-describe the probability of finding that electron at a given point in
-space. Because an electron is restricted to these allowed energies, it
-can absorb energy only of an amount that is exactly the difference to
-some other allowed energy, $\Delta E$, these are shown qualitatively
-in Figure ~\ref{fig:energies}. 
+\indent Quantum mechanics makes it well understood that an electron bound to a nucleus in
+an atom is restricted to a specific set of ``allowed energies''. These energies correspond to different wavefunctions---eigenstates of the atom's energy Hamiltonian operator---that
+describe the probability of finding the electron at a given point in
+space. Because the energy of an electron is restricted to these specific quantities, the electron
+may only absorb energy in amounts exactly equal to the differences between 
+the levels. This fact is illustrated qualitatively in Figure~\ref{fig:energies}. 
 
  \begin{figure}[h] \begin{center}
   \includegraphics[height=60mm]{energy.png}
-  \caption{\textbf{Energy Spectrum for Rubidium}\cite{caltech}. Lines
-    represent allowed energies for a Rubidium atom. }
+  \caption{\textbf{Energy Spectrum for Rubidium}\cite{caltech}. Horizontal lines
+    represent allowed energies for a Rubidium atom. Arrows between these lines represent allowed $\Delta E$. }
   \label{fig:energies}
 \end{center} \end{figure}
 
-A photon of light carries some energy that corresponds to its
-frequency, given by: $E_\gamma = h\nu$, where $h$ is Planck's
+A photon of light carries an energy corresponding to its
+frequency, given by $E_\gamma = h\nu$, where $h$ is Planck's
 constant. If a photon carries energy $E_\gamma = \Delta E$, the energy
-of an allowed transition for an atomic electron, then the electron can
-absorb the photon and transition to an excited state. Since there is
-not a continuous spectrum of allowed energies the electron can only
-absorb photons for specific frequencies. We now consider some source
-of light, of varying frequency, is incident on a sample of some atom
-and the intensity of the light is measured on the other side of the
-sample. Since the atoms can only absorb particular frequencies of
-light, and transmit all others, in a plot of the measured transmitted
-intensity against light frequency, we would see dips in the
-transmitted intensities at the frequencies that correspond precisely
-to the allowed energy transitions of the atomic electrons, as in
-Figure ~\ref{fig:broadening}. 
+of an allowed transition for an atomic electron, then an electron can
+absorb the photon and transition to a different \emph{excited} state. As the allowed $\Delta E$ form a discrete spectrum, only photons with certain frequencies can be absorbed.
+
+Consider some source
+of light, of varying frequency, incident on a sample of some atom. By measuring the intensity of the light on the far side of the sample, the absorption spectrum of the atom can be found. Because the sample will only absorb photons with particular frequencies---transmitting all others---a plot of measured intensity versus light frequency should demonstrate ``dips'' in the exiting beam intensity at the frequencies that correspond precisely
+to the allowed energy transitions of the atomic electrons. A sample plot of such is given in Figure~\ref{fig:broadening}. 
 
 \begin{figure}[h] \begin{center}
-  \includegraphics[height=60mm]{broadening.png}
-  \caption{\textbf{Standard example of spectrum with Doppler broadening}\cite{caltech}}
+  \includegraphics[height=70mm]{broadening.png}
+  \caption{\textbf{Standard example of spectrum with Doppler broadening} plotting transmission intensity against  frequency offset.\cite{caltech}}
   \label{fig:broadening}
 \end{center} \end{figure}
 
@@ -101,22 +93,21 @@ Figure ~\ref{fig:broadening}.
 
 \subsection{Introduction}
 
-An interesting feature of Figure ~\ref{fig:broadening} is that the
-absorption peaks all have some width, with absorption bleeding into
+An notable feature of Figure~\ref{fig:broadening} is that the
+absorption peaks all have some width, with absorption seemingly ``bleeding into''
 frequencies around those corresponding to allowed transitions. This
-phenomena is known as Doppler Broadening, and is a result of atoms in
+phenomena is known as \textbf{Doppler Broadening}, and is a result of atoms in
 the gas phase obeying a Maxwell Speed Distribution. For a light beam incident
 on a sample of some gas, the velocity of the atoms in the sample will
-have some component along the propagation direction of the light. For
-atoms with velocity components along the direction of the light will,
-in their rest frame, see the light being red-shifted towards a lower
-frequency. Likewise in the rest frame of those atoms moving against
-the incident direction of the light will see the light being
-blue-shifted towards a higher frequency. Because of this the sample as
-a whole can absorb light of frequencies off resonance from the
-frequencies associated with the allowed transitions, leading to the
-broadened peaks of Figures ~\ref{fig:broadening} and
-~\ref{fig:absorb1}. 
+have some component along the propagation direction of the light.
+
+Atoms with velocity components in the direction of the light will see the light being red-shifted towards a lower
+frequency, in their rest frame. Likewise in the rest frame of those atoms moving against
+the incident direction of the light will see the incident light as
+blue-shifted towards a higher frequency. Because of this, the sample as
+a whole will absorb light of frequencies off resonance from the
+frequencies associated with the allowed transitions, leading to the observed
+broadened peaks of Figures~\ref{fig:broadening} and~\ref{fig:absorb1}. 
 
 \begin{figure}[h] \begin{center}
   \includegraphics[height=80mm]{absorb3.png}
@@ -128,10 +119,10 @@ broadened peaks of Figures ~\ref{fig:broadening} and
 \label{sec:dop:meth}
 To observe a Doppler Broadened absorption spectrum we used a diode
 laser aimed at a chamber of Rubidium gas held at $50^\circ$C. The
-following steps were performed to absorb an absorption spectrum of Rubidium:
+following steps were performed to record the absorption spectrum of Rubidium:
 
 \begin{enumerate}
-\item The provided laser was turned on and the current to the laser
+\item The laser was turned on and the current to the laser
   was increased until the beams was observed to be ``lasing''. This
   was the threshold of laser current associated with the beam, as viewed through
   the CCTV camera on a piece of paper, jumping discontinuously in intensity. 
@@ -140,7 +131,7 @@ following steps were performed to absorb an absorption spectrum of Rubidium:
   assembly. This voltage controlled the angle of incidence of the
   laser on a diffraction grating, effectively controlling the
   frequency of light incident on the gas chamber. 
-\item A CCTV camera, capable of viewing infrared light was aimed as the Rb gas chamber. The incident current to the laser assembly was increased until florescence was seen.
+\item A CCTV camera, capable of viewing infrared light was aimed at the Rb gas chamber. The incident current to the laser assembly was increased until florescence was seen.
 \item A photoelectric diode, capable of reporting incoming light
   intensity in the form of voltage, was placed in the path of the beam
   exiting the Rubidium chamber.
@@ -152,10 +143,13 @@ following steps were performed to absorb an absorption spectrum of Rubidium:
 \end{enumerate}
 
 \subsection{Results}
+
+Figures~\ref{fig:absorb1} and~\ref{fig:absorb2} show the absorption spectrum recorded during the first part of the experiment. Doppler broadening is evident, as is noise in the signal.
+
 \begin{figure}[h] \begin{center}
   \includegraphics[height=80mm]{2-2-002.png}
   \caption{\textbf{Intensity of Laser Beam vs. Varying Laser Frequency
-      with Pump}  shown over the course of approximately two full
+      with Pump} shown over the course of approximately two full
     cycles in frequency. The red lines show the beginning and end of
     one ramp cycle.}
   \label{fig:absorb2}
@@ -165,88 +159,71 @@ following steps were performed to absorb an absorption spectrum of Rubidium:
 
 \subsection{Introduction}
 
-In order to interpret an absorption spectrum it is essential that we
-know what frequency, or relative frequency, of light is incident on
-our sample. Since our diffraction grating sweeps through its position
-at a constant rate a simple Michelson Interferometer can be set up to
-convert between the time of in our oscilloscope traces and a relative
-frequency scale. The motivation being so we can measure the relative
-frequencies of the different excited and ground states in our Rubidium
-spectrums.
+In order to numerically interpret a recorded absorption spectrum, knowledge of the frequency (or relative frequency) of the light incident on the sample is essential. Since the diffraction grating sweeps through its position
+at a constant rate, a Michelson Interferometer can be set up and used to relate the time dimension of the oscilloscope traces to a relative frequency scale. With this relation, the difference in frequencies between excited and ground states of the Rubidium spectrum may be measured.
 
-A Michelson Interferometer is made by splitting some beam of light
-into two arms with a path length distance, $\Delta L$, between
-them. The light is then recombined and sent into a detector. Because
-of the difference in path length, when recombined the two beams will
-be out of phase, and the combined beam's intensity will go as:
+A Michelson Interferometer is constructed by splitting a beam of light
+into two ``arms'' with a difference in path length distance, denoted $\Delta L$. The light is recombined and sent into a detector. The difference in path length results in the recombined beams being out of phase, thereby effecting interference. The combined beam's intensity will go as given in Equation~\ref{eq:intensity-interferometer}
 \begin{equation}
+\label{eq:intensity-interferometer}
 I \propto 1 + \cos \frac{4\pi \Delta Lf}{c}
 \end{equation}
 where $f$ is the frequency of light and $c$ is the speed of light. If
-the frequency of the light is shifted, then the intensity will go as a
-sinusoid, with period 
+the frequency of the light is shifted, then the intensity will go sinusoidally, with period given by Equation~\ref{eqn:T} where $\Delta f$ corresponds to change in frequency.
 \begin{equation}
 \label{eqn:T}
-T = \frac{2\Delta L \delta f}{c}
+T = \frac{2\Delta L \Delta f}{c}
 \end{equation}
-here $\delta f$ is corresponding change in frequency. Equation
-~\ref{eqn:T} can be inverted to give $\delta f$:
+
+ Equation~\ref{eqn:T} can be inverted to give $\Delta f$, as in Equation~\ref{eqn:df}.
 \begin{equation}
 \label{eqn:df}
-\delta f = \frac{c}{2\Delta L T}
+\Delta f = \frac{c}{2\Delta L T}
 \end{equation}
 
 \subsection{Methods}
 
-The laser from Section ~\ref{sec:broad} was used with the same
-settings tuned to the absorption lines of Rubidium. A diagram of the
+The same laser with tuning from Section~\ref{sec:broad} (to show the absorption spectrum of Rubidium) was used. A diagram of the
 interferometer can be found in Figure~\ref{fig:setup} as the part of
-the apparatus beginning with the reflected beam from the first beam splitter. The following was
-done to set up the apparatus:
+the apparatus beginning with the reflected beam from the first beam splitter. The following steps were performed to set up the apparatus:
 \begin{enumerate}
-\item The beam incident to the wedge was split into two (using a beam splitter) and the stronger beam was sent to the interferometer setup (described in the following steps). The weaker beam was sent to the probe-pump beam setup as given above.
-\item The interferometer beam was sent to a 50-50 beam splitter placed so as to create a new perpendicular beam.
+\item The beam incident to the wedge was split into two (using a beam splitter) and the stronger beam was sent to the interferometer (setup described below).
+\item The interferometer beam was sent to a $50-50$ beam splitter placed at an angle to ``create'' a new beam perpendicular to the incident one.
 \item In the path of the original beam was placed a mirror which reflected light back at the beam splitter.
 \item In the path of the new beam (leaving the splitter at $90^\circ$
   to the original beam) was placed another mirror. This mirror
   reflected the beam back to the splitter. This mirror was placed as
   far away from the splitter as possible, so as to maximize the
-  difference in distance both beams (original and split) traveled. We
-  measured a $\Delta L$ of $1.7971 \pm 0.0001$m, by counting the
-  number of holes on the optics table. 
+  difference in distance both beams (original and split) traveled. A path length difference of $\Delta L=1.7971 \pm 0.0001$m was measured.
 \item The two beams (off of both mirrors) were aligned after passing through the beam splitter one last time.
 \item This aligned beam was directed into a photoelectric diode to measure light intensity.
 %\item Measurements of absorption spectra (with pump beam to point out hyperfine splitting) were made alongside interferometer intensity. Figure~\ref{fig:int_1} represents these data.
 \end{enumerate}
 
 \subsection{Results}
+
 \begin{figure}[h] \begin{center}
   \includegraphics[height=70mm]{4-1-009.png}
   \caption{\textbf{Laser Intensity \& Interferometer Beam Intensity over Change in Frequency} demonstrating the changing intensity (fringes) generated by the interferometer over the same interval as the intensity incident from the laser beam traveling through the Rubidium chamber. }
   \label{fig:int_1}
 \end{center} \end{figure}
 
-Figure ~\ref{fig:int_1} shows our interference patter (shown in red)
-alongside a Rubidium absorption spectrum. To establish a conversion
-between time and frequency, the number of periods in a given interval of
-the interference pattern were counted. Using Equation ~\ref{eqn:df}
-the $\frac{\delta f}{T}$ can be calculated to give a conversion
-between time and frequency. We established a $\frac{\delta f}{T}$ of
-$0.004 \pm
-.002\frac{\normalfont{GHz}}{\normalfont{ms}}$. Figure~\ref{fig:detuning}
-shows the absorption spectrum of Rubidium against the detuning from
+Figure~\ref{fig:int_1} shows the interference patter (in red)
+alongside the Rubidium absorption spectrum. To establish a relation between time and frequency, the number of periods in a given interval of
+the interference pattern were counted. Using Equation~\ref{eqn:df}, $\frac{\Delta f}{T}$ can be calculated to give a conversion
+between time and frequency. A $\frac{\Delta f}{T} = 0.004 \pm
+.002\frac{\normalfont{GHz}}{\normalfont{ms}}$ was found. Figure~\ref{fig:detuning}
+shows the absorption spectrum of Rubidium against the detuning (frequency offset) from
 the largest peak. 
 
-The error here is dominated by that from the determination of $\Delta L$ and
-could be reduced by having a larger difference in the length of the
-two arms of the interferometer. Because of the fixed length of the BNC
-cable coming from the photo-diode detector we were limited to roughly
-half of the length of the optics bench for the long arm.  
+The error here is dominated by the determination of $\Delta L$ and
+could be reduced by increasing the path length difference between the two arms of the interferometer. Because of the fixed length of the BNC
+cables, however, there was a limit of roughly half the length of the optics bench for the long arm.  
 
 \begin{figure}[h] \begin{center}
   \includegraphics[height=80mm]{Detuning.png}
   \caption{\textbf{Absorption Spectrum of Rubidium } with
-      interferometrically determined detuning centered around the largest peak. }
+      interferometrically determined detuning centered about the largest peak. }
   \label{fig:detuning}
 \end{center} \end{figure}
 
@@ -254,46 +231,34 @@ half of the length of the optics bench for the long arm.
 
 \subsection{Introduction}
 \label{sec:satabintro}
-We can see in Figure ~\ref{fig:energies} that the 5P$_{\frac{3}{2}}$
-ground state of both Rubidium isotopes is split into two levels give by the F' quantum
+Figure~\ref{fig:energies} shows that the 5P$_{\frac{3}{2}}$
+ground state of both Rubidium isotopes is split into two levels, given by the F' quantum
 number. This splitting is due to coupling of the electron's spin to
-its ``orbit'' and is called the hyperfine structure. 
+its orbit and is called the hyperfine structure. 
 
-However, we notice in the absorption spectrums so far discussed
-(Figures ~\ref{fig:absorb1}, ~\ref{fig:broadening}), that we see only
-the wide doppler broadened lines expected for the un-split
-5P$_{\frac{3}{2}}$ state. This is because, as we can see in Figure
-~\ref{fig:energies}, that the 5P$_{\frac{3}{2}}$ splittings are much
-more closely spaced than the ground state lines and more importantly
-closer together than the doppler broadening for each
-transition. Because the doppler broadening is wider than the
-separation of the excited state splittings they can not be seen in a
+It may be noticed, however, that in the absorption spectra so far discussed
+(Figures~\ref{fig:absorb1} and~\ref{fig:broadening}), only
+the wide Doppler broadened lines expected for the un-split
+5P$_{\frac{3}{2}}$ state can be seen. This is because, as shown in Figure~\ref{fig:energies}, the 5P$_{\frac{3}{2}}$ splittings are much
+more closely spaced than the ground state lines and--more importantly--closer together than the Doppler broadening for each
+transition. Because the Doppler broadening is wider than the
+separation of the excited state splittings, the hyperfine structure cannot be seen in a
 regular absorption experiment.
 
-To get around this we now consider two collinear beams incident on the
-Rubidium sample in opposite directions. One beam, called the pump
-beam, is to have intensity much greater than the other. The weaker
-beam is called the probe beam, and is the one whose intensity is to be
-measured after exiting the Rubidium gas. For atoms in the gas with velocity
-component along the beam direction the light will be shifted in
-opposite frequency directions for the respective beams since the two beams are
-going in opposing directions. This will, as before, result in the
-typical doppler broadening off-resonance with respect to the
-transitions. For atoms with zero velocity component along the light
-propagation direction there is no frequency shift for either beam, and
-both beams can be absorbed by the atom. Because the pump beam is so
-intense it will saturate these atoms, stationary in the beam
-direction, in the excited state, preventing the probe beam from being
-absorbed and increasing its transmission percentage when the incident
-light is on resonance, allowing for the fine structure of Rubidium to
-be seen in an absorption spectrum using this set up.
+To overcome this issue of resolution, a refined setup is used. Consider two collinear beams incident on the
+Rubidium sample coming from opposite directions. One beam is given a far greater intensity than the other. The weaker
+beam is called the \emph{probe} beam and the beam with the greater intensity is called the \emph{pump} beam. It is the intensity of the probe beam that is measured after it exits the Rubidium gas.
+
+Atoms in the sample with a velocity component parallel (or anti-parallel) to the direction of the beam will be shifted in opposite frequency directions. As before, this results in typical Doppler broadening off-resonance (with respect to the transitions). For atoms with zero velocity component in the propagation direction, however, there is no frequency shift for \emph{either} beam, thus both beams are absorbed. Because the pump beam is so intense, these atoms will be saturated, preventing the probe beam from being absorbed. Thus, when the probe beam is on resonance, there will be a higher transmission percentage, allowing the file structure of the Rubidium spectrum to be observed.
 
 Another consequence of the close frequency proximity of the split
 5P$_{\frac{3}{2}}$ states is the phenomena of cross-over
 peaks. Consider two closely spaced resonant lines at frequencies
 $\nu_1$ and $\nu_2$ and a light frequency of $\nu_{\gamma} = \frac{\nu_1 +
-  \nu_2}{2}$. Because of doppler broadening there will be a ``false''
+  \nu_2}{2}$. Because of Doppler broadening, there will be a ``false''
 peak at $\nu_{\gamma}$. 
+
+
 \subsection{Methods}
 \label{sec:satabmeth}
 \begin{figure}[h] \begin{center}
@@ -306,23 +271,23 @@ used in this experiment. A diagram of our apparatus is shown in Figure
 ~\ref{fig:setup}. The following steps were carried out in performing
 this experiment. 
 \begin{enumerate}
-\item The beam, instead of being reflected by a mirror into the
-  chamber, is sent into a 2$^\circ$ wedge and the reflected beams sent
+\item Instead of being reflected by a mirror directly into the
+  chamber, the laser beam was sent into a 2$^\circ$ wedge. The two reflected beams were sent
   into the Rubidium chamber and into two photo-diode detectors on the
-  other side. The transmitted beam is reflected around
-  the chamber.
-\item The beam directed around the chamber was aimed at a 50-50 beam
-  splitter that reflects the beam into the chamber to be the pump beam.
+  other side.
+\item The beam transmitted by the wedge was reflected around the chamber by using mirrors. This beam was to be the pump beam.
+\item The pump beam was aimed at a 50-50 beam
+  splitter that reflected it into the chamber.
 \item The pump beam was then aligned to be collinear with one of the
-  beams coming from the wedge (probe beam). The probe beam signal is
-  shown in Figures~\ref{fig:satabsorb1} and~\ref{fig:withPump_1}
+  beams coming from the wedge (probe beam). The probe beam intensity was
+  plotted as shown in Figures~\ref{fig:satabsorb1} and~\ref{fig:withPump_1}
 \item The signal from the probe beam was subtracted electronically
-  from the reference signal coming from other wedged beam, shown in Figure~\ref{fig:scaled_1}. 
+  from the reference signal coming from other wedged beam as shown in Figure~\ref{fig:scaled_1}. 
 \end{enumerate}
 
 \clearpage
 \begin{figure}[h] \begin{center}
-  \includegraphics[height=6in, angle = 90]{full.png}
+  \includegraphics[height=6in, angle = 0]{full.png}
   \caption{\textbf{Overall final set up of apparatus} showing
     placement of all beam splitters, mirrors, and various other
     devices to simultaneously measure the saturated absorption
@@ -364,36 +329,23 @@ this experiment.
   \label{fig:det2}
 \end{center} \end{figure}
 
-We would expect to see evidence of the crossover peaks in
-Figures~\ref{fig:det1} and ~\ref{fig:det2}, which shows a blown up
-view of the 87 and 85 b lines, so labeled in Figure
-~\ref{fig:scaled_1}. What we can see, in both cases, is two well
-defined peaks of large amplitude. In figure ~\ref{fig:det1} we can see
-two small peaks in the absorption at around 0.9 and 1.2 GHz detuning
-and possibly another at 1.1 GHz. As shown in
-Figure~\ref{fig:energies}, both $^{85}$ and $^{87}$ Rubidium have
-their excited state split into four energy levels. Here we count
-four and possibly a fifth. Five peaks would be conclusive evidence of
-one of these being a cross-over peak. We would expect that a
-cross-over peak would be of greater intensity than the regular
-resonance peaks, because they have contribution from multiple excited
-state transitions instead of just one. Because there are two peaks
-with significantly greater amplitude, we are inclined to believe that
-these are cross-over peaks, but this would leave two resonance peaks
-that are not here shown.
-
-In the 85b spectrum (Figure~\ref{fig:det2}) we see again two peaks
+It would be expected to see evidence of crossover peaks in
+Figures~\ref{fig:det1} and~\ref{fig:det2}, which show a blown-up
+views of the $87$b and $85$b lines (see Figure~\ref{fig:scaled_1} for relative locations). In both plots, two well-defined peaks of large amplitude can be seen. In Figure~\ref{fig:det1}, two smaller peaks can be seen at around $0.9$ and $1.2$ GHz. Another candidate for a peak can be seen at $\approx 1.1$ GHz. In the 85b spectrum (Figure~\ref{fig:det2}), again two peaks
 with large amplitude and two smaller peaks at around $\pm$ 0.8 GHz
-detuning. If we again take the two larger peaks to be due to
-cross-overs then there are two more resonance peaks not found. 
+detuning can be seen.
 
-As can be seen in our doppler-subtracted spectrum
-(Figure~\ref{fig:scaled_1}),  the resulting spectrum is not ideal. We
-had great difficulty in finding the right combination of the two
-signals to exactly subtract the doppler broadening, and so if the
+From Figure~\ref{fig:energies}, it is shown that both $^{85}$Rb and $^{87}$Rb have are split into four energy levels in their excited state. As noted above, at least four peaks are observed. A fifth peak would be persuasive evidence of one peak being a cross-over peak.
+
+Due to the fact that a cross-over peak would have contributions from multiple excited state transitions, it would be expected that they would have greater intensity than the regular resonance peaks. This seemingly contradicts the data, as the odd peak of the five has a lower intensity (indicating either two cross-over peaks and only three resonance peaks, or one cross-over peak of lesser amplitude).
+
+As can be seen in the Doppler-subtracted spectrum
+(Figure~\ref{fig:scaled_1}), the resulting spectrum is not ideal. There was great difficulty in finding the right combination of the two
+signals to exactly subtract the Doppler broadening, and so if the
 missing peaks were of small enough amplitude it is reasonable that
-they might have been lost in the process. 
+they might have been lost completely in the process.
 
+As with all alignment procedures, it was incredibly difficult to align the pump and probe beams so that they collectively resulted in a spectrum that highlighted the hyperfine splitting.
 
 
 \begin{thebibliography}{99}
@@ -408,10 +360,5 @@ Spectroscopy. Caltech
 
 %%%%%%%%%%%FIGURES%%%%%%%%%%%%
 
-\section{Figures}
-
-\subsection{please remove this for final draft}
-
-\input{figures.tex}
 
 \end{document}
