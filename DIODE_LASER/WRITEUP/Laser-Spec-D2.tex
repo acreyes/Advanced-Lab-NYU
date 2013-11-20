@@ -312,6 +312,86 @@ this experiment.
 
 %%%%%%%%HERE GOES TABLES AND STUFF FROM OTHER DRAFT%%%%%%%%%%%%%%%%%%%%%%%
 
+Figures~\ref{fig:scaled_1}$-$\ref{fig:scaled_4} show four data samples illustrating hyperfine splitting plotted against frequency shift. In each of the plots, the first peak (corresponding to the 87a absorption) is denoted as the $\Delta 0.00$ GHz point. All subsequent shifts are relative to this initial peak. Values given on Tables~\ref{table:relativePositions87} and~\ref{table:relativePositions85} correspond to these numbers. Values given on these two tables were estimated, and in the case where an exact value was indeterminable, the field was left blank. Random error exists here both due to the time resolution with which the samples were taken and the human estimation.
+
+\begin{figure}[H] \begin{center}
+  \includegraphics[height=70mm]{4-2-009.png}
+  \caption{Saturated absorption \textbf{Plot of intensity vs. frequency shift} for data sample 1. }
+  \label{fig:scaled_1}
+\end{center} \end{figure}
+
+\begin{figure}[H] \begin{center}
+  \includegraphics[height=60mm]{4-2-010.png}
+  \caption{Saturated absorption \textbf{Plot of intensity vs. frequency shift} for data sample 2. }
+  \label{fig:scaled_2}
+\end{center} \end{figure}
+
+\begin{figure}[H] \begin{center}
+  \includegraphics[height=60mm]{4-2-011.png}
+  \caption{Saturated absorption \textbf{Plot of intensity vs. frequency shift} for data sample 3. }
+  \label{fig:scaled_3}
+\end{center} \end{figure}
+
+\begin{figure}[H] \begin{center}
+  \includegraphics[height=60mm]{4-2-012.png}
+  \caption{Saturated absorption \textbf{Plot of intensity vs. frequency shift}  for data sample 4. }
+  \label{fig:scaled_4}
+\end{center} \end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Relative positions of peaks (in GHz) for $^{87}$Rb, with values given to $\pm 0.05$ GHz}
+\begin{tabular}{ c | c c c c | c c c c }
+  \hline
+  \hline
+  sample no. & a & & & & b   \\
+  \hline
+  1 & $-$ & $-$ & $-$ & $-$ & 5.97 & 6.09 & 6.16 & 6.27 \\
+  2 & 0.00 & 0.04 & 0.08 & $-$ & 5.97 & 6.09 & 6.16 & 6.28 \\
+  3 & 0.00 & 0.04 & $-$ & $-$ & 5.62 & 5.73 & 5.79 & 5.83  \\
+  4 & 0.00 & 0.03 & 0.07 & $-$ & 5.97 & 6.09 & 6.17 & 6.28
+\end{tabular}
+\label{table:relativePositions87}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Relative positions of peaks (in GHz) for $^{85}$Rb, with values given to $\pm 0.05$ GHz}
+\begin{tabular}{ c | c c c c | c c c c | c c c c | c c c c }
+  \hline
+  \hline
+  sample no. & a & & & & b  \\
+  \hline
+  1 & 2.5 & 2.53 & $-$ & $-$ & 5.01 & 5.07 & 5.10 & 5.15 \\
+  2 & 2.39 & 2.42 & $-$ & $-$ & 4.98 & 5.04 & 5.06 & 5.12 \\
+  3 & 2.25 & 2.27 & $-$ & $-$ & 4.68 & 4.74 & 4.76 & 4.81 \\
+  4 & 2.34 & 2.39 & 2.42 & $-$ & 4.99 & 5.04 & 5.07 & 5.12 
+\end{tabular}
+\label{table:relativePositions85}
+\end{table}
+
+Frequency offsets between groupings of peaks (as seen in Figure~\ref{fig:detuning}) are given in Table~\ref{table:freqOffset} below.
+
+Accepted values place the spacing between $^{87}$Rb lines at $6.8$ GHz, and spacing between $^{85}$Rb lines at $3.035$ GHz. These values are somewhat comparable (though not entirely so) with the measured averaged measured spectrum produced in this experiment with spacings given in Table~\ref{table:freqOffset}.
+
+\begin{table}[H]
+\centering
+\caption{Average frequency difference ($\Delta$GHz) between peaks with associated error}
+\begin{tabular}{ || c | c c c c || }
+  \hline
+  \hline
+   $-$ & 87a & 85a & 85b & 87b \\
+  \hline
+  87a & $-$ & $2.91 \pm 0.08$ & $6.16 \pm 0.13$ & $7.39 \pm 0.17$ \\
+  85a & $2.91 \pm 0.08$ & $-$ & $3.25 \pm 0.11$ & $4.48 \pm 0.16$ \\
+  85b & $6.16 \pm 0.13$ & $3.25 \pm 0.11$ & $-$ &  $1.23 \pm 0.07$ \\
+  87b & $7.39 \pm 0.17$ & $4.48 \pm 0.16$ & $1.23 \pm 0.07$ & $-$  \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:freqOffset}
+\end{table}
+
 \begin{figure}[h] \begin{center}
   \includegraphics[height=70mm]{detune1.png}
   \caption{Saturated absorption \textbf{Plot of intensity
@@ -346,6 +426,16 @@ missing peaks were of small enough amplitude it is reasonable that
 they might have been lost completely in the process.
 
 As with all alignment procedures, it was incredibly difficult to align the pump and probe beams so that they collectively resulted in a spectrum that highlighted the hyperfine splitting.
+
+
+\vspace{3em}
+
+Because there was extra time available at the end of the experiment, we decided to attempt to observe the relation between resonant absorption and the refractive index in Rb gas.
+
+To do so, we took one incident beam, split it in two, passed one through the Rb chamber, and had the other travel the same distance, but not pass through the chamber. The two beams were then recombined and this sum (with interference) was then passed into a photoelectric diode. Changes in frequency between the two beams (frequency change due to refractive index of Rb gas) should effect interference which should be measurable with the diode.
+
+Unfortunately, we were unable to precisely reproduce this effect. We attempted aligning the two beams multiple ways; however, we never were able to see evidence of interference, or if we did, it was too faint to be in any way noticeable.
+% NOTE ABOVE THAT "EFFECT" with an "E" is the right word to use. I know the verb is normally "Affect", but in this case it's "effect". Not to be rude, just /so many people/ get this wrong because they learn that an "effect" is only ever a noun.
 
 
 \begin{thebibliography}{99}
