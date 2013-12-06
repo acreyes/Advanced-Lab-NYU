@@ -10,7 +10,7 @@ import os
 ##############THINGS TO CHANGE##########
 folder = "neg_steel_0.7v"
 tit = (u'Mossbauer Spectrum of Iron')
-centers = [-5.2, -1.5, 1.2, 4.9, 8.3]
+centers = [-8.9, -5.2, -1.5, 1.2, 4.9, 8.3]
 global nPeaks 
 nPeaks = len(centers)
  
@@ -72,7 +72,7 @@ for files in glob.glob("*.Rpt"): #loop over files
     net.append(float(data[4]))
     pm.append(float(data[5]))
 
-folder = "neg_iron_two"
+folder = "neg_iron_full"
 os.chdir('./..')
 os.chdir(folder)
 
