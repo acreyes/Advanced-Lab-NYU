@@ -22,6 +22,19 @@ def lorentzian(x,c,*p):
     denominator = ( x - (c) )**2 + p[0]**2
     y = p[1]*(numerator/denominator) 
     return y
+def gaussian(x, *p):
+    y = p[2]*np.exp(-((x-p[1])/p[0])**2) 
+    return y
+# hwhm, peak center, intensity, vertshift.
+def multgauss(x, *p):
+    centers = p[0:nPeaks]
+    y = p[nPeaks]
+    intensities = p[nPeaks +1: 2*nPeaks+1]
+    widths = p[2*nPeaks+1:3*nPeaks+1]
+    for i in range(nPeaks):
+        q = [widths[i], centers[i], intensities[i]]
+        y += gaussian(x, *q)
+    return(y)
 
 def velocity(freq):
     amp = 0.508 #in mm
@@ -102,6 +115,12 @@ print(popt)
 #print pcov[0,0], pcov[1,1], pcov[2,2], pcov[3,3]
 plt.plot(x, multlor(x,*popt), label = 'Lorentzian Fit')
 
+popt, pcov = curve_fit(multgauss, vel, net, p,maxfev=3000)
+print 'Gaussian parameters'
+print(popt)
+plt.plot(x, multlor(x,*popt), label = 'Gaussian Fit')
+
+plt.legend(loc = 'upper right')
 plt.plot(vel, net, 'o')
 plt.title(tit)
 plt.xlim(-12, 12)
