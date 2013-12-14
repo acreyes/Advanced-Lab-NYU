@@ -15,6 +15,8 @@
 \usepackage{wrapfig}
 \usepackage[english]{babel}
 \usepackage{float}
+\usepackage{bibentry}
+\usepackage {natbib}
 
 \numberwithin{equation}{section}
 \numberwithin{figure}{section} 
@@ -222,14 +224,16 @@ Table~\ref{table:hd-calculated} gives the calculated wavelength values.
 
 \begin{table}[H]
 \centering
-\caption{\textbf{Hydrogen/Deuterium Line Wavelengths} given in (nm) }
-\begin{tabular}{ || c | c c c || }
+\caption{\textbf{Hydrogen/Deuterium Line Wavelengths} given in
+  (nm). $\lambda_{\infty}$ values given account for 100 nm systematic shift. }
+\begin{tabular}{ || c | c c c c || }
   \hline
   \hline
-  line & wavelength (left) [nm] & wavelength (right) [nm] & $\Delta \lambda$ [nm]  \\
+  line & wavelength (left) [nm] & wavelength (right) [nm] & $\Delta
+  \lambda$ [nm] & $\lambda_{\infty}$ [nm] \\
   \hline
-  red & 761.75 & 761.48 & 0.27 \\
-  blue & 579.82 & 579.56 & 0.26 \\
+  red & 761.75 & 761.48 & 0.27 & 656\\
+  blue & 579.82 & 579.56 & 0.26 & 486\\
   \hline
   \hline
 \end{tabular}
@@ -394,37 +398,88 @@ E_i - E_f = \dfrac{hc}{\lambda} = \dfrac{\mu_X Z^2 e^4}{\left( 4 \pi \epsilon_0 
 \dfrac{1}{\lambda} \propto \mu
 \end{equation}
 
-From this, the relation between wavelengths and masses is found, given in Equation~\ref{eq:wavelength-masses}, wherein the 
-
+This leads to the following expression for the wavelengths emitted by
+a finite mass nucleus
 \begin{equation}
-\label{eq:wavelength-masses}
-\dfrac{\lambda_H - \lambda_D}{\lambda_H} = \dfrac{1-M_H / M_D}{1+M_H/m}
+  \label{eq:inf}
+  \lambda_M = \lambda_{\infty}(1-m_e/M)^{-1}
 \end{equation}
-
-
-From Equation~\ref{eq:mass-shift}, we can calculate the difference in mass between Hydrogen and Deuterium, as is done below.
-
-Equation~\ref{eq:deltaMass} gives the difference in mass with $m_e$ the mass of an electron, and $\Delta \lambda$ is the difference in wavelength between the Hydrogen and Deuterium isotope spectrum lines.
-
+This is in contradiction with the expression given in the
+writeup\cite{writeup},
 \begin{equation}
-\label{eq:deltaMass}
-\Delta M = \dfrac{\Delta\lambda}{\lambda_\infty} \dfrac{M_D M_H} {m_e}
+  \label{eq:writeup}
+  \lambda_M = \lambda_{\infty}(1+m_e/M)
 \end{equation}
+Equation(\ref{eq:inf}) leads to the following expression for the mass
+ratio of Deuterium to Hydrogen
+\begin{equation}
+  \label{eq:ratio}
+  \frac{M_D}{M_H} =
+  \left[
+    \frac{1+m_e/M_H}{1-\Delta\lambda/\lambda_{\infty}}-1
+  \right]^{-1}
+\end{equation}
+Using the data from Table~\ref{table:hd-calculated} we get
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|| c | ccc ||} \hline
+    $\Delta \lambda$ [nm] & $M_D/M_H$ & $M_D$ [Mev/c$^2$] & M$_n$[Mev/c$^2$]\\ \hline
+    0.26 & 1.70 & 1595.05 & 654.56 \\
+    0.27 & 1.91 & 1792.09 & 851.59 \\ \hline
+  \end{tabular}
+  \caption{Mass ratio calculations}
+  \label{tab:ratio}
+\end{table}
+We can get the neutron mass by subtracting the nuclear binding energy
+of Deuterium. To do these calculations we use 
+\begin{align}
+\begin{split}
+  \label{eq:things}
+  \centering
+  m_e/M_H &= 1836.12\\
+  M_H & = 938.27 MeV/c^2\\
+  \Delta E_{binding} & = 2.23 MeV
+\end{split}
+\end{align}
 
-$TODO$
+% From this, the relation between wavelengths and masses is found, given in Equation~\ref{eq:wavelength-masses}, wherein the 
 
-$\Delta M = \dfrac{ 0.27 \, \mathrm{nm} } { \lambda_\infty } \dfrac{ M_D M_H} { 0.51 \, \mathrm{MeV/C}^2 }$
+% \begin{equation}
+% \label{eq:wavelength-masses}
+% \dfrac{\lambda_H - \lambda_D}{\lambda_{\infty}} = \dfrac{1-M_H / M_D}{1+M_H/m}
+% \end{equation}
 
-$\Delta M = \dfrac{0.26 \, \mathrm{nm} } { \lambda_\infty } \dfrac{M_D M_H} { 0.51 \, \mathrm{MeV/C}^2}$
 
-So the average $\Delta M = TODO$
+% From Equation~\ref{eq:mass-shift}, we can calculate the ratio of the
+% nuclear masses of Hydrogen and Deuterium.
+
+% Equation~\ref{eq:deltaMass} gives the mass ratio with $m_e$ the mass of an electron, and $\Delta \lambda$ is the difference in wavelength between the Hydrogen and Deuterium isotope spectrum lines.
+
+% \begin{equation}
+% \label{eq:deltaMass}
+% \frac{M_D}{M_H} =
+% \left[
+% 1 - \frac{\Delta \lambda}{\lambda_{\infty}}
+% \left(
+% 1 + \frac{M_H}{m}
+% \right)
+% \right]^{-1}
+% \end{equation}
+
+% $TODO$
+
+% $\Delta M = \dfrac{ 0.27 \, \mathrm{nm} } { \lambda_\infty } \dfrac{ M_D M_H} { 0.51 \, \mathrm{MeV/C}^2 }$
+
+% $\Delta M = \dfrac{0.26 \, \mathrm{nm} } { \lambda_\infty } \dfrac{M_D M_H} { 0.51 \, \mathrm{MeV/C}^2}$
+
+% So the average $\Delta M = TODO$
 
 
-$TODO$
+% $TODO$
 
-Given that the mass of the proton is 1836.12 times the mass of the electron, compute the mass of the
-neutron or rather, the difference between the mass of the deuteron and the proton. The neutron mass
-can be obtained from M by observing that the binding energy of the deuteron is 2.23 MeV.
+% Given that the mass of the proton is 1836.12 times the mass of the electron, compute the mass of the
+% neutron or rather, the difference between the mass of the deuteron and the proton. The neutron mass
+% can be obtained from M by observing that the binding energy of the deuteron is 2.23 MeV.
 
 
 \section{Conclusion}
@@ -448,7 +503,8 @@ As was noted in the \textbf{Data \& Analysis} section, there was a discrepancy b
 
 
 
-
+\bibliographystyle{plain}
+\bibliography{references}
 
 
 
