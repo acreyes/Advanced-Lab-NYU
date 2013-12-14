@@ -17,6 +17,8 @@
 \usepackage{bibentry}
 \usepackage {natbib}
 \usepackage{float}
+\usepackage{hyperref}
+
 
 \numberwithin{equation}{section}
 \numberwithin{figure}{section} 
@@ -145,17 +147,32 @@ emission of the $^{57}$Co nucleus.
 For this experiment the actuator was driven at an amplitude of 0.7
 V. According to \cite{writeup} this corresponds to an amplitude of
 0.508 mm. The actuator was driven by a sawtooth ramp, so for a given
-frequency of modulation, $f$ and amplitude $A$,the velocity is given by
+frequency of modulation, $f$ and amplitude $A$, the velocity is given by
 \begin{equation}
   \label{eq:vel}
   v = A\cdot f
 \end{equation}
 
-\vline
-
-The following procedures were performed:
+\hrule
+Setup/calibration procedures:
 \begin{enumerate}
-\item We did things
+\item The output from the scintillator / photomultiplier tube was fed into amplifiers whose outputs were respectively fed into the computerized monitoring hardware, the ORTEC M\ae{}stro software suite.
+\item Several $5.0$ minute long samples of the native $^{57}$Co spectrum was taken and compared to the accepted $^{57}$Co spectrum.
+\item The $14.4$ KeV peak was isolated by matching the collected spectra to the known spectra. The region in which this peak occurred was marked in the M\ae{}stro software as the current ``Region of Interest'' (ROI).
+\end{enumerate}
+
+\vspace{1.2em}
+
+Data collection procedures:
+\begin{enumerate}
+\item A thin piece of stainless steel was placed between the opening in the lead chamber (within which the $^{57}$Co sample was stored) and the scintillator/photomultiplier tube.
+\item Science Workshop Suite (SWS) on the computer was used to control the motion of an actuator that moved the radioactive sample of $^{57}$Co according to input voltage. To simulate positive velocities, an upwards ramp was used. To simulate a negative voltage, a downwards ramp was used.
+\item The voltage and frequency settings of the output voltage ramp from SWS were set/calibrated so that the mapping between frequency would correspond to known velocities (according to provided literature).
+\item With the actuator moving in a defined way, the M\ae{}stro software was set to capture data for $3.0$ minutes.
+\item After the alloted collection time had elapsed, a ROI report was generated and saved to a text file, with given name corresponding to the velocity of the actuator.
+\item The frequency of the ramp was changed, and the M\ae{}stro software was cleared.
+\item Steps (4) through (6) were repeated until data for a full range of velocities (from $-2.0$ to $+2.0$ mm/s) was acquired.
+\item Step (7) was automated using a Windows macro program, as described in Section~\ref{sec:macros}.
 \end{enumerate}
 
 \subsection{Results}
@@ -267,6 +284,29 @@ quadrapole splitting.
 
 \section{Macros}
 \label{sec:macros}
+
+Due to the highly repetitive and time consuming nature of this experiment, the data collection process was automated using a custom-written Windows macro script, written in C++. The complete source code for the macro program may be found at \url{http://www.github.com/wong1275/macro_win}.
+
+The basic premise of the macro is to repeatedly simulate mouse clicks, movements, and keystrokes over regular intervals. The data collection process that was used for this experiment consisted of the following steps:
+
+\begin{enumerate}
+\item Set new frequency of ramp in SWS ($\rightarrow$ set velocity)
+\item Clear data from ORTEC M\ae{}stro software
+\item Start new measurement acquisition on M\ae{}stro software
+\item Wait $3.0$ minutes for data sample acquisition
+\item Select region of interest on M\ae{}stro plot
+\item Generate statistics about region of interest and save them into a text file
+\item Repeat
+\end{enumerate}
+
+A standard form of the above steps was provided as input to a python script which automatically generated a full macro step list that ranged over all desired frequencies. This custom macro script was then passed to the C++ macro program using the \texttt{-m} flag. \\
+
+Theoretically, the macro program would only need to be run once per substance; however, it was determined that manually switching from positive velocity (upwards ramp) to negative velocity (downwards ramp) required less work than writing the additional macro steps into the code.
+
+Another issue encountered while running the macro was the fact that occasionally the ORTEC software would crash, potentially causing hours' worth of time to be lost. Regardless of the fact that this happened several times over the entire course of the experiment, we still managed to collect quite an appreciable amount of data.
+
+
+
 
 
 \bibliographystyle{plain}

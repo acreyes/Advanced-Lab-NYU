@@ -34,7 +34,7 @@
 The Hydrogen-Deuterium Isotope Shift
 \horrule{0.5pt}
 \normalfont \normalsize 
-\textsc{Advanced Experimental Physics }
+\textsc{Advanced Experimental Physics DRAFT Report 2 }
 }
 
 \author{Adam Reyes \\ George Wong} % Your name
@@ -87,11 +87,8 @@ that the mass shift from Hydrogen($M_H$) to Deuterium($M_D$) is
 \end{equation}
 difference in reduced masses causes a difference in spectra between hydrogen and deuterium ``isotope shift''
 
+A blazed grating was used in this experiment, which meant that the orientation of the grating (i.e. upwards or downwards) was important and determined the effective brightness of the observed lines. Figure~\ref{fig:diagram1} shows a ``zoomed in'' version of the grating, demonstrating the angled etching on the grating. Light incident from the left (as in the diagram) would necessarily have different intensity in its (e.g.) first order diffraction as compared to light incident from the right.
 
-
-* talk about best angle of incidence * \\
-* talk about the orientation of the grating (upside down vs. right side up) * \\
-* theory behind grating * \\
 
 \subsection{Setup/Apparatus}
 
@@ -191,50 +188,8 @@ In this section, we actually measure the spectra of the light (emission spectra)
 
 The angular divisions on the rotation table came with the smallest unit of $1/3^\circ$. For each of our measurements not involving the fine-adjustment eyepiece, our recorded values were to a precision of $1/30^\circ$, or $1/10$ of the smallest marked measure.
 
-\vspace{1.5em}
-
 One gauge marking on the fine-adjustment eyepiece was found to be: \\
 $1$ guage $= 0.0023\pm0.0001$ degrees.
-
-\begin{table}[H]
-\centering
-\caption{\textbf{Hydrogen/Deuterium Spectrum Lines} taken with angle of incidence $\alpha = 60^\circ$ and no use of fine-adjustment knob. }
-\begin{tabular}{ || c | c c c || }
-  \hline
-  \hline
-  line & degrees & $(\frac{1}{3})^\circ$ & $(\frac{1}{30})^\circ$  \\
-  \hline
-  zeroth & $351$ & $0$ & $8$  \\
-  faint purple & 333 & $1$ & $8$  \\
-  bright purple & 332 & 2 & 2 \\
-  faint purple & 332 & 1 & 7 \\
-  bright green-blue & 330 & 2 & 0 \\
-  very faint green-blue & 330 & 0 & 8 \\
-  very faint green-blue & 330 & 0 & 1 \\
-  faint green & 328 & 2 & 8 \\
-  very faint green & 328 & 1 & 2 \\
-  bright red & 325 & 2 & 7 \\
-  faint red & 324 & 2 & 3 \\
-  very bright red & 324 & 1 & 1 \\
-  very faint purple & 318 & 1 & 4 \\
-  bright purple & 316 & 2 & 6 \\
-  faint purple & 316 & 1 & 9 \\
-  bright blue-green & 313 & 0 & 7 \\
-  very faint blue-green & 312 & 1 & 2 \\
-  very faint blue-green & 312 & 0 & 1 \\
-  faint purple & 309 & 2 & 9 \\
-  faint purple & 309 & 0 & 8 \\
-  faint red & 304 & 0 & 7 \\
-  purple & 301 & 2 & 6 \\
-  extremely faint purple & 301 & 1 & 7 \\
-  very bright red & 301 & 1 & 2 \\
-  bright blue & 296 & 1 & 2 \\
-  extremely faint blue & 295 & 0 & 8 \\
-  \hline
-  \hline
-\end{tabular}
-\label{table:hd60}
-\end{table}
 
 \begin{table}[H]
 \centering
@@ -268,19 +223,20 @@ Table~\ref{table:hd-calculated} gives the calculated wavelength values.
 \begin{table}[H]
 \centering
 \caption{\textbf{Hydrogen/Deuterium Line Wavelengths} given in (nm) }
-\begin{tabular}{ || c | c c || }
+\begin{tabular}{ || c | c c c || }
   \hline
   \hline
-  line & order & wavelength (nm)  \\
+  line & wavelength (left) [nm] & wavelength (right) [nm] & $\Delta \lambda$ [nm]  \\
   \hline
-  data & goes & here \\
+  red & 761.75 & 761.48 & 0.27 \\
+  blue & 579.82 & 579.56 & 0.26 \\
   \hline
   \hline
 \end{tabular}
 \label{table:hd-calculated}
 \end{table}
 
-\vspace{.7em}
+\vspace{1.7em}
 
 
 In an attempt to eliminate systematic error, the Sodium (Na) spectrum was also measured. The calculated wavelength values for Sodium were compared to the accepted Sodium spectrum wavelengths, which has lines at $589.0$ and $589.6$ nm. The difference between accepted and calculated values was compared for first and second order diffraction lines, and a rough linear relationship between degree and offset was established.
@@ -339,16 +295,94 @@ Using the same formula as given above in Equation~\ref{eq:wavelengthEqn}, the co
   left & 1883.9 & 3 & 628.0 \\
   right & 1882.1 & 3 & 627.4 \\
   \hline
+  average $\Delta\lambda$ & $--$ & $--$ & 0.6 \\
+  \hline
   \hline
 \end{tabular}
 \label{table:na-wavelength}
 \end{table}
 
-* note the above table doesn't seem quite right. that or my remembering about the linearity isn't correct... either way we are of by $0.6^\circ$ each time, which is what we should be... we're also off by $>100$ nm, which doesn't make any sense to me. Maybe I'm running the wrong code?
+The accepted wavelengths for the sodium spectra lines are given in Table~\ref{table:na-accepted}.
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Accepted Sodium Spectrum Wavelengths}}
+\begin{tabular}{ || c | c || }
+  \hline
+  \hline
+   & $\lambda$ [nm] \\
+  \hline
+  ``left'' & $588.9950$ \\
+  ``right'' & $589.5924$ \\
+  \hline
+  $\Delta$lines & $0.5974$ \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:na-accepted}
+\end{table}
+
+A comparison of the experimentally recovered wavelength values versus accepted values yields two noteworthy observations: (1) experimental wavelengths were off from expected values by $\approx 100 - 170$ nm and (2) the difference in wavelength between the two lines ($\Delta\lambda_1\lambda_2$) in experimental data was found to be consistently $0.6$nm, a value which perfectly corresponds to its accepted counterpart.
+
+Due to the correlation between experimental and accepted values for $\Delta \lambda_1 \lambda_2$, it was decided that the experimental $\Delta \lambda$ values were deemed usable.
+
+\vspace{1.2em}
+
+\hrule
+\vspace{0.7em}
+
+
+
+\begin{table}[H]
+\centering
+\caption{\textbf{Hydrogen/Deuterium Spectrum Lines} taken with angle of incidence $\alpha = 60^\circ$ and no use of fine-adjustment knob. }
+\begin{tabular}{ || c | c c c || }
+  \hline
+  \hline
+  line & degrees & $(\frac{1}{3})^\circ$ & $(\frac{1}{30})^\circ$  \\
+  \hline
+  zeroth & $351$ & $0$ & $8$  \\
+  faint purple & 333 & $1$ & $8$  \\
+  bright purple & 332 & 2 & 2 \\
+  faint purple & 332 & 1 & 7 \\
+  bright green-blue & 330 & 2 & 0 \\
+  very faint green-blue & 330 & 0 & 8 \\
+  very faint green-blue & 330 & 0 & 1 \\
+  faint green & 328 & 2 & 8 \\
+  very faint green & 328 & 1 & 2 \\
+  bright red & 325 & 2 & 7 \\
+  faint red & 324 & 2 & 3 \\
+  very bright red & 324 & 1 & 1 \\
+  very faint purple & 318 & 1 & 4 \\
+  bright purple & 316 & 2 & 6 \\
+  faint purple & 316 & 1 & 9 \\
+  bright blue-green & 313 & 0 & 7 \\
+  very faint blue-green & 312 & 1 & 2 \\
+  very faint blue-green & 312 & 0 & 1 \\
+  faint purple & 309 & 2 & 9 \\
+  faint purple & 309 & 0 & 8 \\
+  faint red & 304 & 0 & 7 \\
+  purple & 301 & 2 & 6 \\
+  extremely faint purple & 301 & 1 & 7 \\
+  very bright red & 301 & 1 & 2 \\
+  bright blue & 296 & 1 & 2 \\
+  extremely faint blue & 295 & 0 & 8 \\
+  \hline
+  \hline
+\end{tabular}
+\label{table:hd60}
+\end{table}
+
+
+In addition to the data reproduced in the above tables, another group of angles at which spectral lines were observed was taken and is reproduced in Table~\ref{table:hd60}. Unfortunately, these data proved to be wrought with error and quantitative analysis proved meaningless. For completeness sake, they are still presented. At the very least, the recorded apparent colors of the lines in the spectra can be used to qualitatively classify the spectrum.
+
+Potential sources of this error are discussed below in the \textbf{Conclusion} section.
+
 \vspace{1.5em}
 \hrule
-\vspace{1.5em}
-To calculate the actual difference in mass, we use the Rydberg formula for reduced mass, Equation~\ref{eq:rydberg-rm}, to determine the inverse proportionality of wavelength to reduced mass, as in Equation~\ref{eq:inverse-prop}.
+\vspace{1.7em}
+
+To calculate the actual difference in mass, the Rydberg formula for reduced mass was used. Equation~\ref{eq:rydberg-rm} was considered in determining the inverse proportionality of wavelength to reduced mass, as in Equation~\ref{eq:inverse-prop}.
 
 \begin{equation}
 \label{eq:rydberg-rm}
@@ -360,7 +394,7 @@ E_i - E_f = \dfrac{hc}{\lambda} = \dfrac{\mu_X Z^2 e^4}{\left( 4 \pi \epsilon_0 
 \dfrac{1}{\lambda} \propto \mu
 \end{equation}
 
-From this, we find the relation between wavelengths and masses, given in Equation~\ref{eq:wavelength-masses}, wherein the 
+From this, the relation between wavelengths and masses is found, given in Equation~\ref{eq:wavelength-masses}, wherein the 
 
 \begin{equation}
 \label{eq:wavelength-masses}
@@ -370,42 +404,53 @@ From this, we find the relation between wavelengths and masses, given in Equatio
 
 From Equation~\ref{eq:mass-shift}, we can calculate the difference in mass between Hydrogen and Deuterium, as is done below.
 
+Equation~\ref{eq:deltaMass} gives the difference in mass with $m_e$ the mass of an electron, and $\Delta \lambda$ is the difference in wavelength between the Hydrogen and Deuterium isotope spectrum lines.
 
-... shift calculations. I don't want to do this because of possibly using the incorrect data.
+\begin{equation}
+\label{eq:deltaMass}
+\Delta M = \dfrac{\Delta\lambda}{\lambda_\infty} \dfrac{M_D M_H} {m_e}
+\end{equation}
+
+$TODO$
+
+$\Delta M = \dfrac{ 0.27 \, \mathrm{nm} } { \lambda_\infty } \dfrac{ M_D M_H} { 0.51 \, \mathrm{MeV/C}^2 }$
+
+$\Delta M = \dfrac{0.26 \, \mathrm{nm} } { \lambda_\infty } \dfrac{M_D M_H} { 0.51 \, \mathrm{MeV/C}^2}$
+
+So the average $\Delta M = TODO$
+
+
+$TODO$
+
+Given that the mass of the proton is 1836.12 times the mass of the electron, compute the mass of the
+neutron or rather, the difference between the mass of the deuteron and the proton. The neutron mass
+can be obtained from M by observing that the binding energy of the deuteron is 2.23 MeV.
 
 
 \section{Conclusion}
 
+Quantitatively, we found $\Delta M$, the difference in mass between Hydrogen and Deuterium to be $TODO$. Further, from this value, we found the mass of a neutron to be $TODO$. This compares to the accepted mass of a neutron, which is $940 \, \mathrm{MeV/C}^2$.
+
+
+It was important to consider exactly what was being observed during the course of the experiment. In the case of the data taken for Table~\ref{table:hd60}, it turned out that many of the observed lines were artifacts or some other unknown phenomenon, and therefore were useless in qualitative analysis.
+
+Performing the sodium calibration was massively useful as it allowed us to verify our angle finding/setting methodologies. Further, it allowed us to qualitatively get a feel for what angular distances corresponded to what wavelength differences. Each of the observed lines in the Hydrogen-Deuterium spectra was, upon close examination, actually a set of two lines. This is an entirely expected result, as the difference in masses between the Hydrogen and Deuterium in the samples should/would split each observable line into two.
+
+Ideally, a comparison of the spectra of both pure Hydrogen and the Hydrogen-Deuterium mixture would be observed; however, due to time constraints and the poor quality of available Hydrogen lamps, this experiment was not performed. \\
+
 
 Over the course of performing the experiment, it was found that many of the procedures were difficult or impossible to perform well due to the condition of the apparatus. Precise angular measurements were nearly impossible due to the amount of light needed in order to see both the reticule and the line. Overall, the alignment of the device (in terms of collimator, mounting table, and telescope) was next-to-impossible due to misalignment of the mirror/grating in the vertical plane. Also, the grating seemingly had several scratches on it and was overall in bad condition. For the angles measured to yield more precision in the calculations of wavelength, a grating with a higher resolution might be used.
 
-** talk about focusing in on a single line **
+A particularly troublesome part of the experiment was actually determining where the spectrum lines actually were. The necessitated low-light condition of the room made the crosshairs very difficult to view, and so precise alignment (especially at such a fine visual resolution) was incredibly difficult.
+
+As was noted in the \textbf{Data \& Analysis} section, there was a discrepancy between the measured and accepted wavelength values for spectral lines in Sodium that ranged from $100$ to $\approx 170$ nm. Unfortunately, the reasoning for this remains undetermined. Potential explanations include: defects in the grating causing uneven diffraction of light, defects in telescope optics causing light to bend in unanticipated ways, light incident to the diffraction grating from other sources in the room, and impurities in the original lamp source.
 
 
-%%%%%%%%%%%%%References%%%%%%%%%%%%%%%%%%%%
-%\begin{thebibliography}{99}
-%\bibitem{vanier}Jacques Vanier. Relaxation in rubidium-87 and the
-%  rubidium maser. Phys. Rev., 168:129-149, 1968.
-%\bibitem{harvard}"Rubidium Fluoresence." Cfa.harvard.edu. Harvard, n.d. Web.
-%\end{thebibliography}
 
 
-% %%%%%%%%%%%%%% Absorption figure%%%%%%%%%%%%%%%%%%
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=3in]{/Users/adamreyes/Dropbox/AdvancedLab/Diode-Laser-Spec/WriteUp/figures_laserspec/ag-4-2-001_freq.png}
-%   \caption{Measured Transmission Absorption Spectrum for Rubidium.}
-%   \label{fig:absorption}
-% \end{figure}
-% %%%%%%%%%% 
-% %%%%%%%%%%%%%%%%%% Saturated Absorption figure%%%%%%%%
-% \begin{figure*}[h]
-%   \centering
-%   \includegraphics[width=3in]{/Users/adamreyes/Dropbox/AdvancedLab/Diode-Laser-Spec/WriteUp/figures_laserspec/ag-4-2-009_saturated.png}
-%   \caption{Measured Saturated Absorption Spectrum for Rubidium with electronic subtration of doppler broadening and laser current modulation}
-%   \label{fig:saturatedabsorption}
-% \end{figure*}
-% %%%%%%%%%% 
+
+
+
 
 
 \end{document}
